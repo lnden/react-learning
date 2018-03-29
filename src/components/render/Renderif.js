@@ -4,11 +4,14 @@
 import React from 'react'
 import { Component } from 'react'
 
+const isLogin = false;
 class Renderif extends Component{
     render(){
-        return <div>
-            <h3>测试，我是条件渲染</h3>
-        </div>
+        if(isLogin){
+            return <div>Logged in</div>
+        }else {
+            return <div>Logged out</div>
+        }
     }
 }
 export default Renderif

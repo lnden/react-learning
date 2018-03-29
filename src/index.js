@@ -18,7 +18,9 @@ import Event from './components/Event'
 /*引入组件state*/
 import Input2 from './components/Input2'
 /*条件渲染引用组件*/
-import Renderif from './components/render/Renderif'
+//import Renderif from './components/render/Renderif'
+/*列表渲染*/
+import List from './components/list/List'
 
 /*下面DataList为组件对象方式传递数值*/
 const DataList = {
@@ -42,7 +44,8 @@ class ComponentC extends React.Component{
         return <h2>ComponentC C组件 我是CC组件</h2>
     }
 }
-
+/*用于三目渲染*/
+const isLogin = true;
 
 ReactDOM.render(
     <section>
@@ -59,7 +62,9 @@ ReactDOM.render(
         <h3>hellow ,word</h3>
         <Event></Event>
         <Input2 text="这个是state传值"></Input2>
-        <Renderif></Renderif>
+        {/*<Renderif></Renderif>*/}
+        {isLogin ? (<div>Logger in</div>):(<div>Logger out</div>)}
+        <List></List>
     </section>,
     document.getElementById('root')
 
