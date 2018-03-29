@@ -17,6 +17,9 @@ import Input from './components/Input'
 import Event from './components/Event'
 /*引入组件state*/
 import Input2 from './components/Input2'
+/*条件渲染引用组件*/
+import Renderif from './components/render/Renderif'
+
 /*下面DataList为组件对象方式传递数值*/
 const DataList = {
     job:'web前端开发工程师',
@@ -56,6 +59,7 @@ ReactDOM.render(
         <h3>hellow ,word</h3>
         <Event></Event>
         <Input2 text="这个是state传值"></Input2>
+        <Renderif></Renderif>
     </section>,
     document.getElementById('root')
 
