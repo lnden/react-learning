@@ -13,6 +13,11 @@ import Transmit from './components/Transmit'
 import Objectdata from './components/Objectdata'
 /*引入外部组件使用input输入框*/
 import Input from './components/Input'
+/*引入组件绑定事件onClick*/
+import Event from './components/Event'
+/*引入组件state*/
+import Input2 from './components/Input2'
+/*下面DataList为组件对象方式传递数值*/
 const DataList = {
     job:'web前端开发工程师',
     ing:'努力学习React，争取早日成仙',
@@ -47,8 +52,10 @@ ReactDOM.render(
         <Transmit name='lily' age='26'></Transmit>
         {/*<Objectdata data={DataList}></Objectdata>*/}
         <Objectdata {...DataList}></Objectdata>
-        <Input text="阿萨飒飒飒飒"/>
+        <Input text="这里面的内容是不能更改的，使用props传的值"/>
         <h3>hellow ,word</h3>
+        <Event></Event>
+        <Input2 text="这个是state传值"></Input2>
     </section>,
     document.getElementById('root')
 
