@@ -22,6 +22,9 @@ import Input2 from './components/Input2'
 /*列表渲染*/
 import List from './components/list/List'
 
+/*引入表单页面*/
+import Form from './components/forms/Form'
+
 /*下面DataList为组件对象方式传递数值*/
 const DataList = {
     job:'web前端开发工程师',
@@ -65,6 +68,7 @@ ReactDOM.render(
         {/*<Renderif></Renderif>*/}
         {isLogin ? (<div>Logger in</div>):(<div>Logger out</div>)}
         <List></List>
+        <Form></Form>
     </section>,
     document.getElementById('root')
 
