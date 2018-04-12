@@ -1,5 +1,5 @@
 /**
- * Create By DingLindong on 2018/3/29
+ * Create By Ding on 2018/3/29
  */
 import React from 'react'
 import { Component } from 'react'
