@@ -1,0 +1,53 @@
+.al-indexHeader {
+  height: 60px;
+  border:2px solid #f00;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  -webkit-box-pack: justify;
+  -webkit-box-align: center;
+  align-items: center;
+  overflow: hidden;
+}
+.al-indexHeaderItem{
+  width: 30%;
+  height: 100%;
+  line-height: 1.17333rem;
+  white-space: nowrap;
+  margin:0;
+  display: block;
+}
+/*左侧*/
+.al-indexHeaderItem.left{
+  text-align: left;
+  border:1px solid #f00;
+}
+.al-indexHeaderItem .icon-appWakeUp{
+  width:100%;
+  height:100%;
+}
+
+/*中间*/
+.al-indexHeaderItem.center{
+  text-align: center;
+  border:1px solid #0f0;
+}
+
+/*右侧*/
+.al-indexHeaderItem.right{
+  text-align: right;
+  border:1px solid #00f;
+}
+.al-indexHeaderItem .platformChange{
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  overflow: hidden;
+  width:100%;
+  height:100%;
+  line-height:20px;
+}
+
+.al-indexHeaderItem .ev_switchPlatform{
+  display: none;
+}

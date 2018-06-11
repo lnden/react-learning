@@ -6,7 +6,7 @@ import React, { Component } from 'react';
 class Header extends Component {
     render() {
         return (
-            <div className="App">
+            <div className="Appheader">
                 我是一个头部组件
             </div>
         );
