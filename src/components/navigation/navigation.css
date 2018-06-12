@@ -1,0 +1,32 @@
+.al-indexNavbar {
+    padding: 5px 10px;
+    position: relative;
+    background: #fff;
+    font-size: 18px;
+}
+
+.al-indexNavbar ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -ms-flex-pack: justify;
+    -webkit-box-pack: justify;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.al-indexNavbar ul li {
+    color: #666;
+    position: relative;
+    list-style: none;
+}
+
+.al-indexNavbar ul .active a {
+    color: #3598db;
+    position: relative;
+}

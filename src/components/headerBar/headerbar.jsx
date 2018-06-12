@@ -1,8 +1,11 @@
 
 import React,{Component} from 'react'
-import './headerBar.css'
+import './headerbar.css'
 
 class HeaderBar extends Component{
+    constructor(props){
+        super(props)
+    }
     render(){
         return (
             <header className="al-indexHeader">

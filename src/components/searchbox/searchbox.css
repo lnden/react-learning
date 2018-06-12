@@ -1,0 +1,35 @@
+.searchCont {
+    background: #fff;
+    padding: 10px 10px;
+    height: 40px;
+    line-height: 40px;
+    overflow: hidden;
+}
+.searchCont .searchInput {
+    float: left;
+    width: 258px;
+    height: 40px;
+    overflow: hidden;
+    background: hsla(0,0%,80%,.2) url(//img50.allinmd.cn/index/searchBorder.png) no-repeat;
+    background-size: contain;
+    font-size: 20px;
+    color: #a0a0a0;
+}
+.searchCont .searchInput:first-child {
+    padding-left:20px;
+}
+.searchCont button {
+    float: left;
+    background: #3caefa;
+    border-radius: 0 6px 6px 0;
+    width: 76px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    color: #fff;
+}
+.searchCont:after {
+    content: "";
+    display: table;
+    clear: both;
+}

@@ -2,7 +2,10 @@ import ReactDOM from 'react-dom';
 import React from 'react';
 import './style/index.css';
 
-import HeaderBar from './components/headerBar/headerBar';
+import HeaderBar from './components/headerBar/headerbar';
+import SearchBox from './components/searchbox/searchbox';
+import Navigation from './components/navigation/navigation';
+
 import App from './demo/App';
 import Header from './components/HeaderMo';
 import registerServiceWorker from './registerServiceWorker';
@@ -55,6 +58,8 @@ import registerServiceWorker from './registerServiceWorker';
 ReactDOM.render(
     <section>
         <HeaderBar />
+        <SearchBox />
+        <Navigation />
         <App />
         <Header />
         {/*<ComponentA></ComponentA>*/}
