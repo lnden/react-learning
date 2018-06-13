@@ -26,9 +26,26 @@ const list = [
         num_comments: 5555,
         points: 6666,
         objectID: 2,
+    },
+    {
+        title: 'Angular',
+        url: 'https://facebook.github.io/react/',
+        author: 'Jordan Walke',
+        num_comments: 7777,
+        points: 8888,
+        objectID: 3,
+    },
+    {
+        title: 'Vue',
+        url: 'https://facebook.github.io/react/',
+        author: 'Jordan Walke',
+        num_comments: 9999,
+        points: 5555,
+        objectID: 4,
     }
 ];
 
+//高阶函数简介写法start
 // function isSearched(searchTerm) {
 //     return function(item) {
 //         return item.title.toLowerCase().includes(searchTerm.toLowerCase());
@@ -36,6 +53,9 @@ const list = [
 // }
 const isSearched = searchTerm => item =>
     item.title.toLowerCase().includes(searchTerm.toLowerCase());
+//高阶函数简介写法end
+
+
 
 class App extends Component {
     constructor(props){
@@ -49,24 +69,28 @@ class App extends Component {
     }
 
     onDismiss(id){
-    //    const updateList = this.state.list.filter(function isNotId(item){
-    //        return item.objectID !== id;
-    //    });
-    //    继续拆分
-    //    function isNotId(item){0
-    //        return item.objectID !==id;
-    //    }
-    //    还可以在精简
-    //    const isNotId = item => item.objectID !==id;
-    //    const updateList = this.state.list.filter(isNotId)
-    //    还可以继续精简
-    //    下面最精简的实现方式
+        // 由难至简写法
+        // const updateList = this.state.list.filter(function isNotId(item){
+        //     return item.objectID !== id;
+        // });
+
+        // 继续拆分
+        // function isNotId(item){
+        //     return item.objectID !==id;
+        // }
+        // const updateList = this.state.list.filter(isNotId);
+
+        // 还可以在精简
+        // const isNotId = item => item.objectID !==id;
+        // const updateList = this.state.list.filter(isNotId)
+
+        // 下面最精简的实现方式
         const updateList = this.state.list.filter(item=>item.objectID !== id);
+
         //这里是同步state数据
         this.setState({list:updateList});
-
-
     }
+
     onSearchChange(event){
         this.setState({searchTerm:event.target.value})
     }
@@ -268,6 +292,5 @@ class Button extends Component {
     }
 }
 
-
-
 export default App;
+
