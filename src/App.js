@@ -1,39 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 
-const list = [
-    {
-        title: 'React',
-        url: 'https://facebook.github.io/react/',
-        author: 'Jordan Walke',
-        num_comments: 3,
-        points: 4,
-        objectID: 0,
-    },
-    {
-        title: 'Redux',
-        url: 'https://github.com/reactjs/redux',
-        author: 'Dan Abramov, Andrew Clark',
-        num_comments: 2,
-        points: 5,
-        objectID: 1,
-    },
-    {
-        title: 'Angular',
-        url: 'https://facebook.github.io/angular/',
-        author: 'Luvy',
-        num_comments: 6,
-        points: 9,
-        objectID: 2,
-    },
-];
-
 const Loading = () =>
     <div>
         Loading···
     </div>
-
-
 
 
 //搜索ES6组件
@@ -58,36 +29,6 @@ class Search extends Component {
         )
     }
 }
-
-//重构一个无状态搜索组件
-// function SearchFuncEs(props){
-//     const { value,onChange,children } = props;
-//     return (
-//         <form>
-//             { children }
-//             <input type="text" value={value} onChange={onChange}/>
-//         </form>
-//     )
-// }
-//
-// function SearchFunc({value,onChange,children}){
-//     return (
-//         <form>
-//             { children }
-//             <input type="text" value={value} onChange={onChange}/>
-//         </form>
-//     )
-// }
-//
-// const SearchFuncEs6 = ({value,onChange,children}) => {
-//     return (
-//         <form>
-//             { children }
-//             <input type="text" value={value} onChange={onChange}/>
-//         </form>
-//     )
-// };
-
 
 
 const smallColumn = {
@@ -162,7 +103,6 @@ class App extends Component {
   constructor(props){
     super(props);
       this.state = {
-          list,
           searchTerm:DEFAULT_QUERY,
           results:null,
           searchKey:'',
@@ -244,7 +184,7 @@ class App extends Component {
 
 
   render() {
-      const { searchTerm,results,searchKey,error  }  = this.state;
+      const { searchTerm,results,searchKey,error,isLoading  }  = this.state;
       const page = (results && results[searchKey] &&results[searchKey].page) || 0;
       const list = ( results && results[searchKey] && results[searchKey].hits ) || [];
       // if(error){
@@ -283,9 +223,15 @@ class App extends Component {
                   />
           }
           <div className="interactions">
-                <Button onClick={()=>this.fetchSearchTopStories(searchKey,page+1)}>
-                    More
-                </Button>
+              {
+                  isLoading ?
+                      <Loading />
+                  :
+                      <Button onClick={()=>this.fetchSearchTopStories(searchKey,page+1)}>
+                          More
+                      </Button>
+              }
+
           </div>
 
       </div>
