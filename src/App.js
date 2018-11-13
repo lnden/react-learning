@@ -1,5 +1,15 @@
 import React, { Component } from 'react';
 import './App.css';
+import { sortBy } from 'lodash'
+import classNames from 'classnames'
+
+const SORTS = {
+    NONE: list=> list,
+    TITLE: list=> sortBy(list,'title'),
+    AUTHOR: list=> sortBy(list,'author'),
+    COMMENTS: list=> sortBy(list,'num_comments').reverse(),
+    POINTS: list=> sortBy(list,'points').reverse()
+};
 
 
 //搜索ES6组件
@@ -26,16 +36,56 @@ class Search extends Component {
 }
 
 
+const Sort = ({ sortKey,onSort,children,activeSortKey }) =>{
+    // const sortClass = ['button-inline'];
+    const sortClass = classNames( 'button-inline', { 'button-active': sortKey === activeSortKey } );
+
+    // if(sortKey === activeSortKey){
+    //     sortClass.push('button-active')
+    // }
+    return (
+        <Button
+            onClick={()=>onSort(sortKey)}
+            className={sortClass}
+        >
+            { children }
+        </Button>
+    )
+};
+
+
+
 const smallColumn = {
     width:'10%'
 };
 //表格ES6组件
 class Table extends Component {
     render(){
-        const { list,onDismiss } = this.props;
+        const { list,onDismiss,sortKey,onSort,isSortReverse } = this.props;
+        const sortedList = SORTS[sortKey](list);
+        const reverseSortedList = isSortReverse ? sortedList.reverse() : sortedList
         return (
             <div className="table">
-                {list.map(item=>
+                <div className="table-header">
+                    <span style={{ width: '40%' }}>
+                        <Sort sortKey={'TITLE'} onSort={onSort} activeSortKey={sortKey}
+                        > Title </Sort>
+                    </span>
+                    <span style={{ width: '30%' }}>
+                        <Sort sortKey={'AUTHOR'} onSort={onSort} activeSortKey={sortKey}
+                        > Author </Sort>
+                    </span>
+                    <span style={{ width: '10%' }}>
+                        <Sort sortKey={'COMMENTS'} onSort={onSort} activeSortKey={sortKey}
+                        > Comments </Sort>
+                    </span>
+                    <span style={{ width: '10%' }}>
+                        <Sort sortKey={'POINTS'} onSort={onSort} activeSortKey={sortKey}
+                        > Points </Sort>
+                    </span>
+                    <span style={{ width: '10%' }}> Archive </span>
+                </div>
+                {reverseSortedList.map(item =>
                     <div key={item.objectID} className="table-row">
                       <span style={{width:'40%'}}>
                         <a href={item.url}>{item.title}</a>
@@ -116,8 +166,12 @@ class App extends Component {
           results:null,
           searchKey:'',
           error:null,
-          isLoading:false
+          isLoading:false,
+          sortKey:'NONE',
+          isSortReverse:false
       };
+      this.onSort = this.onSort.bind(this);
+
       this.needsToSearchTopStories = this.needsToSearchTopStories.bind(this);
 
       this.onSearchSubmit = this.onSearchSubmit.bind(this);
@@ -128,21 +182,25 @@ class App extends Component {
       this.onDismiss = this.onDismiss.bind(this);
       this.onSearchChange = this.onSearchChange.bind(this);
   }
+    onSort(sortKey){
+        const isSortReverse = this.state.sortKey === sortKey && !this.state.isSortReverse
+        this.setState({sortKey,isSortReverse})
+    }
 
     needsToSearchTopStories(searchTerm) {
-      return !this.state.results[searchTerm];
-  }
+        return !this.state.results[searchTerm];
+    }
 
 
     onSearchSubmit(event){
-      const { searchTerm } = this.state;
-      this.setState({ searchKey: searchTerm});
-      // this.fetchSearchTopStories(searchTerm);
-      if (this.needsToSearchTopStories(searchTerm)) {
-          this.fetchSearchTopStories(searchTerm);
-      }
-      event.preventDefault();
-  }
+        const { searchTerm } = this.state;
+        this.setState({ searchKey: searchTerm});
+        // this.fetchSearchTopStories(searchTerm);
+        if (this.needsToSearchTopStories(searchTerm)) {
+            this.fetchSearchTopStories(searchTerm);
+        }
+        event.preventDefault();
+    }
 
 
 
@@ -193,7 +251,7 @@ class App extends Component {
 
 
   render() {
-      const { searchTerm,results,searchKey,error,isLoading  }  = this.state;
+      const { searchTerm,results,searchKey,error,isLoading,sortKey,isSortReverse }  = this.state;
       const page = (results && results[searchKey] &&results[searchKey].page) || 0;
       const list = ( results && results[searchKey] && results[searchKey].hits ) || [];
       // if(error){
@@ -228,6 +286,9 @@ class App extends Component {
                   :
                   <Table
                       list={list}
+                      sortKey={sortKey}
+                      isSortReverse={isSortReverse}
+                      onSort={this.onSort}
                       onDismiss={this.onDismiss}
                   />
           }
