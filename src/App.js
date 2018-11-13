@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 
-const Loading = () =>
-    <div>
-        Loading···
-    </div>
-
 
 //搜索ES6组件
 class Search extends Component {
@@ -77,8 +72,22 @@ class Button extends Component {
         )
     }
 }
+const Loading = () =>
+    <div>
+        Loading···
+    </div>
 
+function withLoading(Component){
+    return function({isLoading,...rest}){
+        return isLoading? <Loading /> : <Component { ...rest } />
+    }
+}
+//
+// const withLoading = (Component) =>
+//     ({ isLoading, ...rest }) =>
+//         isLoading ? <Loading /> : <Component { ...rest } />
 
+const ButtonWithLoading = withLoading(Button);
 
 // function isSearched(searchTerm){
 //   return function(item){
@@ -223,14 +232,20 @@ class App extends Component {
                   />
           }
           <div className="interactions">
-              {
-                  isLoading ?
-                      <Loading />
-                  :
-                      <Button onClick={()=>this.fetchSearchTopStories(searchKey,page+1)}>
-                          More
-                      </Button>
-              }
+              <ButtonWithLoading
+                isLoading={isLoading}
+                onClick={()=>this.fetchSearchTopStories(searchKey,page+1)}
+              >
+                  More
+              </ButtonWithLoading>
+              {/*{*/}
+                  {/*isLoading ?*/}
+                      {/*<Loading />*/}
+                  {/*:*/}
+                      {/*<Button onClick={()=>this.fetchSearchTopStories(searchKey,page+1)}>*/}
+                          {/*More*/}
+                      {/*</Button>*/}
+              {/*}*/}
 
           </div>
 

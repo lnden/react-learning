@@ -57,3 +57,30 @@ const SearchFuncEs6 = ({value,onChange,children}) => {
         </form>
     )
 };
+
+
+function withFoo(Component){
+    return function (props){
+        return <Component { ...props } />
+    }
+}
+//ES6简写方式
+// const withFoo = (Component) => (props) =>
+//     <Component { ...props } />
+
+//解析
+// const { foo,bar } = props
+// <SomeComponent foo={foo} bar={bar} />
+// <SomeComponent { ...props } />
+
+function withLoading(Component){
+    return function({isLoading,...rest}){
+        isLoading? <Loading /> : <Component { ...rest } />
+    }
+}
+// ES6简写方式
+// const withLoading = (Component) => (props) =>
+//     props.isLoading?
+//         <Loading />
+//         :
+//         <Component { ...props }/>
