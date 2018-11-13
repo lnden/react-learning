@@ -6,7 +6,7 @@
  * @example 调用示例
  */
 
-import React, { Component } from 'react'
+import React from 'react'
 
 const Loading = () =>
     <div>Loading···</div>

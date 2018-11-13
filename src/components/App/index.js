@@ -22,8 +22,8 @@ import {
     PARAM_PAGE,
     PARAM_HPP, } from '../../constants';
 
-const withLoading = (Component) => ({isloading,...rest}) =>
-    isloading ? <Loading /> : <Component { ...rest } />
+const withLoading = (Component) => ({isLoading,...rest}) =>
+    isLoading ? <Loading /> : <Component { ...rest } />
 
 const ButtonWithLoading = withLoading(Button);
 
