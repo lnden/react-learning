@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e46c0363-9138-4fb9-a71f-73d6143fa5ee" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/todolist/Api.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/todolist/Form.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/todolist/Table.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/todolist/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/authority/demo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Loading/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Loading/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/todolist/Api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/todolist/Api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/todolist/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/todolist/Form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/todolist/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/todolist/Table.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/todolist/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/todolist/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,11 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/package.json">
+      <file leaf-file-name="demo.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/authority/demo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="28" column="59" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="59" />
+            <state relative-caret-position="36">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -46,13 +45,14 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>lindong</find>
       <find>isLoading</find>
       <find>button-inline</find>
+      <find>lindong</find>
     </findStrings>
     <dirStrings>
       <dir>E:\react-learning\src</dir>
       <dir>E:\react-learning\src\todolist</dir>
+      <dir>E:\react-learning</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -75,6 +75,7 @@
         <option value="$PROJECT_DIR$/src/demo/Api.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/authority/demo.js" />
       </list>
     </option>
   </component>
@@ -108,6 +109,17 @@
             <path>
               <item name="react-learning" type="b2602c69:ProjectViewProjectNode" />
               <item name="react-learning" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react-learning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-learning" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react-learning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-learning" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="authority" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -166,7 +178,7 @@
       <workItem from="1542072659583" duration="246000" />
       <workItem from="1542073085910" duration="2244000" />
       <workItem from="1542100221292" duration="41000" />
-      <workItem from="1542163031833" duration="10803000" />
+      <workItem from="1542163031833" duration="11152000" />
     </task>
     <task id="LOCAL-00001" summary="添加无状态组件">
       <created>1542074790990</created>
@@ -196,17 +208,23 @@
       <option name="project" value="LOCAL" />
       <updated>1542089272702</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="添加官方todolist demo">
+      <created>1542181247959</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1542181247959</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18146000" />
+    <option name="totallyTimeSpent" value="18495000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49507388" visible="true" weight="0.17113096" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49507388" visible="true" weight="0.17113096" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -237,10 +255,10 @@
     <MESSAGE value="添加无状态组件" />
     <MESSAGE value="组件拆分" />
     <MESSAGE value="sort title" />
-    <option name="LAST_COMMIT_MESSAGE" value="sort title" />
+    <MESSAGE value="添加官方todolist demo" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加官方todolist demo" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/ComponentAe.js" />
     <entry file="file://$PROJECT_DIR$/src/components/HeaderMo.js" />
     <entry file="file://$PROJECT_DIR$/src/components/Input2.js" />
     <entry file="file://$PROJECT_DIR$/src/components/Objectdata.js" />
@@ -430,6 +448,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="28" column="59" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/authority/demo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
