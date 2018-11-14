@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e46c0363-9138-4fb9-a71f-73d6143fa5ee" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/authority/demo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Loading/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Loading/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/todolist/Api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/todolist/Api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/todolist/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/todolist/Form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/todolist/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/todolist/Table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/todolist/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/todolist/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/authority/clock.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/authority/props.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/authority/demo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/authority/demo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,11 +23,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="demo.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/authority/demo.js">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="144">
+              <caret line="8" column="33" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="33" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -73,9 +75,11 @@
         <option value="$PROJECT_DIR$/src/demo/Form.js" />
         <option value="$PROJECT_DIR$/src/demo/TodoList.js" />
         <option value="$PROJECT_DIR$/src/demo/Api.js" />
-        <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/authority/props.js" />
         <option value="$PROJECT_DIR$/src/authority/demo.js" />
+        <option value="$PROJECT_DIR$/src/authority/clock.js" />
+        <option value="$PROJECT_DIR$/src/index.js" />
       </list>
     </option>
   </component>
@@ -178,7 +182,7 @@
       <workItem from="1542072659583" duration="246000" />
       <workItem from="1542073085910" duration="2244000" />
       <workItem from="1542100221292" duration="41000" />
-      <workItem from="1542163031833" duration="11152000" />
+      <workItem from="1542163031833" duration="16664000" />
     </task>
     <task id="LOCAL-00001" summary="添加无状态组件">
       <created>1542074790990</created>
@@ -215,11 +219,25 @@
       <option name="project" value="LOCAL" />
       <updated>1542181247959</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="添加官方demo">
+      <created>1542181583977</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1542181583977</updated>
+    </task>
+    <task id="LOCAL-00007" summary="添加官方demo">
+      <created>1542181611160</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1542181611160</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18495000" />
+    <option name="totallyTimeSpent" value="24007000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -256,11 +274,10 @@
     <MESSAGE value="组件拆分" />
     <MESSAGE value="sort title" />
     <MESSAGE value="添加官方todolist demo" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加官方todolist demo" />
+    <MESSAGE value="添加官方demo" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加官方demo" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/HeaderMo.js" />
-    <entry file="file://$PROJECT_DIR$/src/components/Input2.js" />
     <entry file="file://$PROJECT_DIR$/src/components/Objectdata.js" />
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor" />
@@ -386,16 +403,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/todolist/Api.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -451,10 +458,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/authority/props.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/authority/clock.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/authority/demo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="573">
+          <caret line="50" column="10" selection-start-line="40" selection-end-line="82" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="33" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
