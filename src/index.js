@@ -6,7 +6,8 @@ import './index.css';
 // import App from './components/App';
 // import App from './todolist'
 // import App from './todolist/Api'
-import App from './authority/demo'
+// import App from './authority/demo'
+import App from './authority/toggle'
 
 import * as serviceWorker from './serviceWorker';
 
