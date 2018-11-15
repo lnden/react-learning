@@ -27,14 +27,14 @@ function Greeting(props){
     }
 }
 
-//
-// export default class Render extends Component {
-//     render(){
-//         return (
-//             <Greeting  isLoggedIn={true}/>
-//         )
-//     }
-// }
+
+class Render extends Component {
+    render(){
+        return (
+            <Greeting  isLoggedIn={true}/>
+        )
+    }
+}
 
 
 
@@ -59,7 +59,8 @@ function LogoutButton(props){
     )
 }
 
-export default class LoginController extends Component {
+
+class LoginController extends Component {
     constructor(props){
         super(props);
         this.handleLoginClick = this.handleLoginClick.bind(this);
@@ -91,3 +92,77 @@ export default class LoginController extends Component {
         )
     }
 }
+
+
+
+
+
+function Mailbox(props){
+    const unreadMessages = props.unreadMessages;
+    return (
+        <div>
+            <h1>Hello!</h1>
+            {
+                unreadMessages.length>0 &&
+                    <h2>
+                        You have {unreadMessages.length} unread messages.
+                    </h2>
+            }
+        </div>
+    )
+}
+const messages = ['React','Re:React','Re:Re:React'];
+
+class Mailboxs extends Component {
+    render(){
+        return (
+            <Mailbox unreadMessages={messages} />
+        )
+    }
+}
+
+
+
+
+function WarningBanner(props){
+    if(!props.warn){
+        return null
+    }
+    return (
+        <div className="warning">
+            Warning!
+        </div>
+    )
+}
+
+class Page extends Component {
+    constructor(props){
+        super(props)
+        this.state = { showWarning:true }
+        this.handleToggleClick = this.handleToggleClick.bind(this);
+    }
+
+    handleToggleClick(){
+        this.setState(state=>({
+            showWarning:!state.showWarning
+        }))
+    }
+
+    render(){
+        return (
+            <div>
+                <WarningBanner warn={this.state.showWarning}/>
+                <button onClick={this.handleToggleClick}>
+                    {this.state.showWarning ? 'Hide':'Show'}
+                </button>
+            </div>
+        )
+    }
+}
+
+
+
+// export default Render
+// export default LoginController
+// export default Mailboxs
+export default Page
