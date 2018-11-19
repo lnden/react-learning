@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e46c0363-9138-4fb9-a71f-73d6143fa5ee" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/authority/extends.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/authority/state.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/authority/extends.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/authority/extends.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/authority/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/authority/form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/authority/state.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/authority/state.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -23,32 +25,45 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="extends.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/authority/extends.js">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="59" column="12" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/index.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+            <state relative-caret-position="288">
+              <caret line="16" column="19" lean-forward="true" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#327#363#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/index.js">
+        <entry file="file://$PROJECT_DIR$/src/router/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+            <state relative-caret-position="18">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
               <folding>
-                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#118#155#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="form.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/authority/form.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="18">
+              <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="extends.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/authority/extends.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="20" column="25" lean-forward="true" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -67,7 +82,6 @@
     <findStrings>
       <find>isLoading</find>
       <find>button-inline</find>
-      <find>lindong</find>
       <find>isLoggledIn</find>
       <find>Greeting</find>
       <find>hanldeChange</find>
@@ -75,6 +89,8 @@
       <find>toCelsius</find>
       <find>tryConvert</find>
       <find>onTemperatureChange</find>
+      <find>function</find>
+      <find>lindong</find>
     </findStrings>
     <dirStrings>
       <dir>E:\react-learning\src</dir>
@@ -107,11 +123,12 @@
         <option value="$PROJECT_DIR$/src/authority/toggle.js" />
         <option value="$PROJECT_DIR$/src/authority/render.js" />
         <option value="$PROJECT_DIR$/src/authority/table.js" />
-        <option value="$PROJECT_DIR$/src/authority/form.js" />
         <option value="$PROJECT_DIR$/src/authority/state.js" />
-        <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/index.css" />
         <option value="$PROJECT_DIR$/src/authority/extends.js" />
+        <option value="$PROJECT_DIR$/src/index.js" />
+        <option value="$PROJECT_DIR$/src/router/index.js" />
+        <option value="$PROJECT_DIR$/src/authority/form.js" />
       </list>
     </option>
   </component>
@@ -151,12 +168,6 @@
               <item name="react-learning" type="b2602c69:ProjectViewProjectNode" />
               <item name="react-learning" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react-learning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-learning" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="authority" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -219,7 +230,7 @@
       <workItem from="1542188393851" duration="1800000" />
       <workItem from="1542247040982" duration="2463000" />
       <workItem from="1542256469045" duration="781000" />
-      <workItem from="1542595083188" duration="7247000" />
+      <workItem from="1542595083188" duration="14888000" />
     </task>
     <task id="LOCAL-00001" summary="添加无状态组件">
       <created>1542074790990</created>
@@ -305,11 +316,18 @@
       <option name="project" value="LOCAL" />
       <updated>1542599377480</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="构成">
+      <created>1542608189998</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1542608189998</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36390000" />
+    <option name="totallyTimeSpent" value="44031000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -319,11 +337,12 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3289256" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="npm" order="2" sideWeight="0.5057851" side_tool="true" weight="0.17113096" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3289256" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.70413226" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.4033058" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -333,7 +352,6 @@
       <window_info anchor="bottom" id="Messages" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3289256" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -352,12 +370,10 @@
     <MESSAGE value="event" />
     <MESSAGE value="条件渲染" />
     <MESSAGE value="Form渲染" />
-    <option name="LAST_COMMIT_MESSAGE" value="Form渲染" />
+    <MESSAGE value="构成" />
+    <option name="LAST_COMMIT_MESSAGE" value="构成" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/manifest.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -506,13 +522,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="28" column="59" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/authority/props.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -541,13 +550,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/authority/form.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="147" column="16" lean-forward="true" selection-start-line="147" selection-start-column="16" selection-end-line="147" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/authority/render.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="327">
@@ -562,16 +564,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -579,10 +571,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/authority/extends.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="59" column="12" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="12" />
+        <state relative-caret-position="252">
+          <caret line="20" column="25" lean-forward="true" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="19" lean-forward="true" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#327#363#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="e#118#155#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/authority/form.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
         </state>
       </provider>
     </entry>
