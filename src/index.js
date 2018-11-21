@@ -2,21 +2,36 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-import { BrowserRouter,HashRouter,Route } from 'react-router-dom'
+/**
+ *  import App from './example/App';
+ *
+ *  import App from './example/components/App';
+ *
+ *  import App from './example/todolist'
+ *  import App from './example/todolist/Api'
+ *
+ *  import App from './example/official/clock'
+ *  import App from './example/official/extends'
+ *  import App from './example/official/form'
+ *  import App from './example/official/props'
+ *  import App from './example/official/render'
+ *  import App from './example/official/state'
+ *  import App from './example/official/toggle'
+ *
+ *  import App from './example/router'
+ */
 
-// import App from './App';
-// import App from './components/App';
-// import App from './todolist'
-// import App from './todolist/Api'
-// import App from './authority/extends'
 import App from './router'
 
 import * as serviceWorker from './serviceWorker';
 
+// import Message from "./pages/Message";
+// import Personal from "./pages/Personal";
+// import Home from "./pages/Home";
+// import Discover from "./pages/Discover";
+
 ReactDOM.render(
-    <BrowserRouter>
-        <App />
-    </BrowserRouter>,
+    <App />,
     document.getElementById('root')
 );
 

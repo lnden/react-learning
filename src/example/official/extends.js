@@ -61,5 +61,6 @@ function App() {
             right={<Chat />} />
     );
 }
+
 // export default WelcomeDialog
 export default App
