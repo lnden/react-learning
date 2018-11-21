@@ -1,0 +1,21 @@
+.public-footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 6;
+    box-shadow: 0 0.06667rem 0.50667rem 0 rgba(67, 116, 220, 0.16);
+}
+.public-footer ul {
+    overflow: auto;
+}
+.public-footer ul li {
+    float:left;
+    width:25%;
+    text-align: center;
+    height:46px;
+    line-height: 46px;
+}
+.selected{
+    color:#f00;
+}

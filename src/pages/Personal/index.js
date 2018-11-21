@@ -7,11 +7,15 @@
  */
 
 import React, { Component } from 'react';
+import CommFooter from '../../components/footer'
 
 class Personal extends Component {
     render(){
         return (
-            <div>个人中心</div>
+            <section>
+                个人中心
+                <CommFooter />
+            </section>
         )
     }
 }
