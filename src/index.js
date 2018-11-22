@@ -25,11 +25,6 @@ import App from './router'
 
 import * as serviceWorker from './serviceWorker';
 
-// import Message from "./pages/Message";
-// import Personal from "./pages/Personal";
-// import Home from "./pages/Home";
-// import Discover from "./pages/Discover";
-
 ReactDOM.render(
     <App />,
     document.getElementById('root')
