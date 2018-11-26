@@ -8,12 +8,17 @@
 
 import React, { Component } from 'react';
 import CommFooter from '../../components/footer'
+import PublicHeader from '../../components/header'
+
 
 class Personal extends Component {
     render(){
         return (
             <section>
-                个人中心
+                <PublicHeader type="我的" />
+                <section>
+                    个人中心
+                </section>
                 <CommFooter />
             </section>
         )

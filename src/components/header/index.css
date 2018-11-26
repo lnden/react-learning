@@ -1,0 +1,24 @@
+.public-header{
+    background:#008bff;
+    color:#fff;
+    height:40px;
+    line-height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.public-header .al-indexHeaderItem{
+    margin:0px;
+    width:33%;
+}
+.public-header .al-indexHeaderItem a{
+    text-decoration:none;
+    color:#fff;
+}
+.public-header .al-indexHeaderItem p{
+    margin:0px;
+    text-align: center;
+}
+.public-header p span{
+    float:left;
+}

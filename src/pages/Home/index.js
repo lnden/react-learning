@@ -8,12 +8,16 @@
 
 import React, { Component } from 'react';
 import CommFooter from '../../components/footer'
+import PublicHeader from '../../components/header'
 
 class Home extends Component {
     render(){
         return (
             <section>
-                我是主页面
+                <PublicHeader type="首页" />
+                <section>
+                    我是主页面
+                </section>
                 <CommFooter />
             </section>
         )
