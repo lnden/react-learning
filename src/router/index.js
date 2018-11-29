@@ -15,6 +15,8 @@ import Discover from '../pages/Discover'
 import Message from '../pages/Message'
 import Personal from '../pages/Personal'
 
+import Public from '../components/public/index.js'
+
 export default class App extends Component {
     render(){
         return (
@@ -26,6 +28,7 @@ export default class App extends Component {
                         <Route path="/discover" component={Discover}/>
                         <Route path="/message" component={Message}/>
                         <Route path="/personal" component={Personal}/>
+                        <Route path="/public" component={Public}/>
                     </Switch>
                 </BrowserRouter>
             </section>
