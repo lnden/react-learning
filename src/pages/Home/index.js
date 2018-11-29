@@ -11,7 +11,6 @@ import CommFooter from '../../components/footer'
 import PublicHeader from '../../components/header'
 import { Link } from 'react-router-dom'
 import './index.css'
-import '//at.alicdn.com/t/font_774677_qe314dvetk.js'
 
 const dataList = [
     {
