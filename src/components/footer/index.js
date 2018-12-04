@@ -9,7 +9,7 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 import './index.css'
-// require('//at.alicdn.com/t/font_774677_m4ixyv24l09.css')
+// require('./font');   //不起作用
 
 export default class PublicFooter extends Component {
     render(){
@@ -18,27 +18,42 @@ export default class PublicFooter extends Component {
                 <ul>
                     <li>
                         <NavLink to="/" exact activeClassName="selected">
-                            <i className="iconfont icon-_bendicang"></i>首页
+                            <svg className="svg-icon" aria-hidden="true">
+                                <use xlinkHref="#icon-homepage_fill"></use>
+                            </svg>
+                            <span>首页</span>
                         </NavLink>
                     </li>
                     <li>
                         <NavLink to="/treasure" activeClassName="selected">
-                            <i className="iconfont icon-_wyshenji"></i>财富
+                            <svg className="svg-icon" aria-hidden="true">
+                                <use xlinkHref="#icon-transaction_fill"></use>
+                            </svg>
+                            <span>财富</span>
                         </NavLink>
                     </li>
                     <li>
                         <NavLink to="/praise" activeClassName="selected">
-                            <i className="iconfont icon-_wyshenji"></i>口碑
+                            <svg className="svg-icon" aria-hidden="true">
+                                <use xlinkHref="#icon-shop_fill"></use>
+                            </svg>
+                            <span>口碑</span>
                         </NavLink>
                     </li>
                     <li>
                         <NavLink to="/friend" activeClassName="selected">
-                            <i className="iconfont icon-_muyue"></i>朋友
+                            <svg className="svg-icon" aria-hidden="true">
+                                <use xlinkHref="#icon-group_fill"></use>
+                            </svg>
+                            <span>朋友</span>
                         </NavLink>
                     </li>
                     <li>
                         <NavLink to="/personal" activeClassName="selected">
-                            <i className="iconfont icon-_jinhuodl"></i>我的
+                            <svg className="svg-icon" aria-hidden="true">
+                                <use xlinkHref="#icon-people_fill"></use>
+                            </svg>
+                            <span>我的</span>
                         </NavLink>
                     </li>
                 </ul>

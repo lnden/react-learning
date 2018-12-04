@@ -13,9 +13,21 @@
     float:left;
     width:20%;
     text-align: center;
-    height:46px;
-    line-height: 46px;
+    height:52px;
+    line-height: 24px;
+}
+.public-footer ul li a{
+    display: block;
 }
 .selected{
-    color:#f00;
+    color:#009ee6;
+}
+.svg-icon {
+    font-size:18px;
+    display: block;
+    margin:0 auto;
+    width: 1.5em; height: 1.5em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
 }
