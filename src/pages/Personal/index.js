@@ -7,9 +7,8 @@
  */
 
 import React, { Component } from 'react';
-import CommFooter from '../../components/footer'
 import PublicHeader from '../../components/header'
-
+import PublicFooter from '../../components/footer'
 
 class Personal extends Component {
     render(){
@@ -19,7 +18,7 @@ class Personal extends Component {
                 <section>
                     个人中心
                 </section>
-                <CommFooter />
+                <PublicFooter />
             </section>
         )
     }

@@ -10,8 +10,8 @@
  */
 
 import React, { Component } from 'react';
-import CommFooter from '../../components/footer'
 import PublicHeader from '../../components/header'
+import PublicFooter from '../../components/footer'
 import { Link } from 'react-router-dom'
 import './index.css'
 
@@ -88,7 +88,7 @@ class Home extends Component {
 
                     </article>
                 </section>
-                <CommFooter />
+                <PublicFooter />
             </section>
         )
     }

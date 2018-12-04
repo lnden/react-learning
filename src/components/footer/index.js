@@ -11,7 +11,7 @@ import { NavLink } from 'react-router-dom'
 import './index.css'
 // require('//at.alicdn.com/t/font_774677_m4ixyv24l09.css')
 
-export default class CommFooter extends Component {
+export default class PublicFooter extends Component {
     render(){
         return (
             <article className="public-footer">
