@@ -11,8 +11,9 @@ import { BrowserRouter,Switch,Route } from 'react-router-dom'
 
 import Login from '../pages/Login'
 import Home from '../pages/Home'
-import Discover from '../pages/Discover'
-import Message from '../pages/Message'
+import Praise from '../pages/Praise'
+import Treasure from '../pages/Treasure'
+import Friend from '../pages/Friend'
 import Personal from '../pages/Personal'
 
 import Public from '../components/public/index.js'
@@ -24,11 +25,12 @@ export default class App extends Component {
                 <BrowserRouter>
                     <Switch>
                         <Route path="/login" component={Login}/>
-                        <Route exact path="/" component={Home}/>
-                        <Route path="/discover" component={Discover}/>
-                        <Route path="/message" component={Message}/>
-                        <Route path="/personal" component={Personal}/>
                         <Route path="/public" component={Public}/>
+                        <Route exact path="/" component={Home}/>
+                        <Route path="/treasure" component={Treasure}/>
+                        <Route path="/praise" component={Praise}/>
+                        <Route path="/friend" component={Friend}/>
+                        <Route path="/personal" component={Personal}/>
                     </Switch>
                 </BrowserRouter>
             </section>

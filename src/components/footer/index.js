@@ -22,13 +22,18 @@ export default class CommFooter extends Component {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/discover" activeClassName="selected">
-                            <i className="iconfont icon-_wyshenji"></i>发现
+                        <NavLink to="/treasure" activeClassName="selected">
+                            <i className="iconfont icon-_wyshenji"></i>财富
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/message" activeClassName="selected">
-                            <i className="iconfont icon-_muyue"></i>消息
+                        <NavLink to="/praise" activeClassName="selected">
+                            <i className="iconfont icon-_wyshenji"></i>口碑
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/friend" activeClassName="selected">
+                            <i className="iconfont icon-_muyue"></i>朋友
                         </NavLink>
                     </li>
                     <li>
