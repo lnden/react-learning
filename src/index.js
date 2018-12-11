@@ -19,9 +19,18 @@ import './index.css';
  *  import App from './example/official/toggle'
  *
  *  import App from './example/router'
+ *  import {BrowserRouter,HashRouter} from 'react-router-dom'
+ *  <BrowserRouter>
+ *      <App />
+ *  </BrowserRouter>
+ *
+ *  生命周期
+ *  import App from './example/lifecycle'
+ *
  */
 
 import App from './router'
+
 
 import * as serviceWorker from './serviceWorker';
 // //引入react-redux集成
@@ -30,10 +39,10 @@ import { Provider } from 'react-redux'
 //引入原生redux
 import store from './store'
 import { addToCart,updateCart,deleteFromCart } from "./store/actions/cart-actions";
-console.log('initial state：',store.getState());
+// console.log('initial state：',store.getState());
 
 let unsubscribe = store.subscribe(()=>{
-    console.log(store.getState())
+    // console.log(store.getState())
 });
 store.dispatch(addToCart('Coffee 500gm',1,250));
 store.dispatch(addToCart('Flour 1kg',2,110));
@@ -48,7 +57,7 @@ unsubscribe();
 
 ReactDOM.render(
     <Provider store={store}>
-        <App />
+        <App/>
     </Provider>,
     document.getElementById('root')
 );

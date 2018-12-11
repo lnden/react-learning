@@ -1,9 +1,9 @@
 /**
  * @author Lnden
  * @date 2018/11/30
- * @desc 文件描述
- * @param {Object} [title]  - 参数说明
- * @example 调用示例
+ * @desc redux示例
+ * @param https://segmentfault.com/a/1190000011474522
+ *
  */
 
 import { createStore } from 'redux'
