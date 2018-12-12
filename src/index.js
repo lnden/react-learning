@@ -27,10 +27,12 @@ import './index.css';
  *  生命周期
  *  import App from './example/lifecycle'
  *
+ *  组件深层次通信 this.context
+ *  import App from './example/context'
  */
 
-import App from './router'
-
+// import App from './router'
+import App from './example/context/demo'
 
 import * as serviceWorker from './serviceWorker';
 // //引入react-redux集成
