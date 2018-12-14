@@ -7,8 +7,9 @@
  * 但是，如果组件之间嵌套的比较深，即使提升状态到共同父组件，再同步状态到相应的组件还是需要一层一层的传递下去，可能会比较繁琐。
  *      官方推荐了context的用法
  *
- * 1.首先使用this.props 父组件向子组件传值 App => Header => SearchBtn => HeaderConttext
- * 2.使用context兄弟间传值
+ * 1.index.js 首先使用this.props 父组件向子组件传值 App => Header => SearchBtn => HeaderConttext
+ * 2.context-simple.js 适用于createContext()分发内容
+ * 3.context-complex.js /components 适用于createContext() 分发内容，内部执行 [事件] 控制分发内容
  *
  */
 

@@ -29,10 +29,13 @@ import './index.css';
  *
  *  组件深层次通信 this.context
  *  import App from './example/context'
+ *  import App from './example/context-simple'
+ *  import App from './example/context-middle'
+ *  import App from './example/context-complex'
  */
 
 // import App from './router'
-import App from './example/context/demo'
+import App from './example/context/context-middle'
 
 import * as serviceWorker from './serviceWorker';
 // //引入react-redux集成

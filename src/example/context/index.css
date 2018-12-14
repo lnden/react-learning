@@ -55,3 +55,18 @@
     line-height: 36px;
     color:#fff;
 }
+
+
+/*context-simple*/
+.dark {
+    background:#f00;
+    color:#fff;
+}
+
+.changebtn{
+    margin-top:10px;
+    background:#808;
+    color:#fff;
+    width:140px;
+    text-align: center;
+}
