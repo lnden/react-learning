@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Redux简单实现原理</title>
+</head>
+<body>
+
+    <button id="addBtn">增量</button>
+    <button id="minusBtn">减量</button>
+    <span id="counter"></span>
+
+    <script type="text/javascript">
+        function createStore(reducer){
+            let state;
+            let listeners = [];
+
+            let getState = () => state ;
+
+            let dispatch = (action)=>{
+                state = reducer(state,action);
+                listeners.forEach((l)=>l())
+            };
+            let subscribe = (listener)=>{
+                listeners.push(listener);
+                return ()=>{
+                    listeners =listeners.filter((l)=>l!=listener)
+                }
+            };
+
+            dispatch();
+
+            return { getState, dispatch, subscribe }
+        }
+
+        let reducer = (state=0,action) => {
+            if(!action) return state;
+            switch(action.type){
+                case 'INCREMENT':
+                    return state+1;
+                case 'DECREMENT':
+                    return state-1;
+                default:
+                    return state;
+            }
+        };
+
+        const store = createStore(reducer);
+
+        store.subscribe(()=>{
+            document.querySelector('#counter').innerHTML = store.getState();
+        });
+
+        document.querySelector('#addBtn').addEventListener('click',()=>{
+            store.dispatch({type:'INCREMENT',payload:'添加'})
+        });
+
+        document.querySelector('#minusBtn').addEventListener('click',()=>{
+            store.dispatch({type:'DECREMENT',payload:'删除'})
+        })
+
+    </script>
+</body>
+</html>
