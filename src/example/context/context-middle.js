@@ -84,7 +84,7 @@ function Button(){
         <ThemeContext.Consumer>
             {
                 ({theme,toggle}) => {
-                    console.log(theme)
+                    // console.log(theme)
                     return (
                         <button style={theme} onClick={toggle}>MainContent => PublicHeader => Button</button>
                     )
