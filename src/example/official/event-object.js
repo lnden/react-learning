@@ -17,7 +17,8 @@ class App extends Component{
         this.handleChange = this.handleChange.bind(this);
         this.getInput = this.getInput.bind(this);
         this.handleChangeRef = this.handleChangeRef.bind(this);
-        this.handleKeyup = this.handleKeyup.bind(this)
+        this.handleKeyup = this.handleKeyup.bind(this);
+        // this.setUsername = this.setUsername(this);
 
     }
 
@@ -45,7 +46,13 @@ class App extends Component{
             console.log(event.target.value)
         }
     }
-
+    setUsername =()=>{
+        //为什么这个方法使用ES6来编写?如果还在初始化就绑定this会出现报错，立即修改state，state还没初始化
+        //还可以在 onClick={this.setUsername.bind(this)}
+        this.setState({
+            username:'初始化默认值yes~'
+        })
+    };
 
 
     render(){
@@ -70,7 +77,18 @@ class App extends Component{
 
                 <h3>键盘事件</h3>
                 <input type="text" onKeyUp={this.handleKeyup}/>
-                <button>输入完成之后按回车键!</button>
+                <span>输入完成之后按回车键!</span>
+
+                <hr/>
+
+                <h3>双向数据绑定</h3>
+                {/*model改变影响view，view改变反过来影响model*/}
+                {/*直接绑定value会出现警告，可以使用defaultValue={}*/}
+                {/*<input type="text" defaultValue={this.state.username}/>*/}
+                <input type="text" value={this.state.username} onChange={this.handleChange}/>
+                <span>{this.state.username}</span>
+                <p></p>
+                <button onClick={this.setUsername}>改变username的初始值</button>
             </section>
         )
     }
