@@ -40,7 +40,7 @@ import './index.css';
  */
 
 // import App from './router'
-import App from './example/context/context-middle'
+import App from './example/official/event'
 
 import * as serviceWorker from './serviceWorker';
 // //引入react-redux集成
