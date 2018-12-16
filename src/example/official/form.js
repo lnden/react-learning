@@ -46,41 +46,39 @@ class NameForm extends Component {
 
 
 // example 2
-class EssayForm extends Component {
-    constructor(props){
-        super(props);
+class RadioForm extends Component {
+    constructor(){
+        super();
         this.state = {
-            value: 'Please write an essay about your favorite DOM element'
+            sex:'2'
         };
-        this.handleChange = this.handleChange.bind(this);
+        this.handleSex = this.handleSex.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleChange(event){
+    handleSex(event){
         this.setState({
-            value:event.target.value
+            sex:event.target.value
         })
     }
     handleSubmit(event){
-        alert('An essay was submitted: '+this.state.value);
+        console.log(this.state.sex)
         event.preventDefault();
     }
 
     render(){
         return (
             <form onSubmit={this.handleSubmit}>
-                <label>
-                    Essay:
-                    <textarea value={this.state.value} onChange={this.handleChange} />
-                </label>
-                <input type="submit" value="Submit"/>
+                <input type="radio" value="1" checked={this.state.sex==='1'} onChange={this.handleSex}/>男
+                <input type="radio" value="2" checked={this.state.sex==='2'} onChange={this.handleSex}/>女
+                <input type="submit" defaultValue="提交"></input>
             </form>
         )
     }
 }
 
 // example 3
-class FlavorForm extends Component {
+class SelectForm extends Component {
     constructor(props){
         super(props);
         this.state = {value:'coconut'};
@@ -120,8 +118,98 @@ class FlavorForm extends Component {
     }
 }
 
-
 // example 4
+class CheckboxForm extends Component{
+    constructor(){
+        super();
+        this.state = {
+            hobby:[
+                {
+                    title:'运动',
+                    checked:true,
+                    id:1
+                },
+                {
+                    title:'篮球',
+                    checked:false,
+                    id:2
+                },
+                {
+                    title:'睡觉',
+                    checked:true,
+                    id:3
+                }
+            ]
+        };
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleChange(index){
+        let hobby = this.state.hobby;
+        hobby[index].checked = !hobby[index].checked;
+        this.setState({
+            hobby
+        })
+    }
+
+    handleSubmit(e){
+        console.log(this.state.hobby)
+        e.preventDefault()
+    }
+    render(){
+        return (
+            <form onSubmit={this.handleSubmit}>
+                爱好：
+                {
+                    this.state.hobby.map((value,index)=>{
+                        return (
+                            <span key={value.id}>
+                                {value.title}<input type="checkbox" checked={value.checked} onChange={this.handleChange.bind(this,index)}/>
+                            </span>
+                        )
+                    })
+                }
+                <input type="submit" defaultValue="提交"/>
+            </form>
+        )
+    }
+}
+// example 5
+class TextareaForm extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            value: 'Please write an essay about your favorite DOM element'
+        };
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleChange(event){
+        this.setState({
+            value:event.target.value
+        })
+    }
+    handleSubmit(event){
+        alert('An essay was submitted: '+this.state.value);
+        event.preventDefault();
+    }
+
+    render(){
+        return (
+            <form onSubmit={this.handleSubmit}>
+                <label>
+                    Essay:
+                    <textarea value={this.state.value} onChange={this.handleChange} />
+                </label>
+                <input type="submit" value="Submit"/>
+            </form>
+        )
+    }
+}
+
+// example 6
 class Reservation extends Component {
     constructor(props){
         super(props);
@@ -172,6 +260,9 @@ class Reservation extends Component {
 }
 
 // export default NameForm;
-// export default EssayForm;
-// export default FlavorForm;
+// export default RadioForm;
+// export default SelectForm;
+// export default CheckboxForm;
+// export default TextareaForm;
 export default Reservation
+
