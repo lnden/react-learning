@@ -72,7 +72,19 @@ function todoApp(state = initialState,action){
 ```
 
 
+### react-redux
 
+provider
+
+connect
+
+
+connect()
+
+    mapStateToProps
+    mapDispatchToProps
+    mergeProps
+    options
 
 
 
