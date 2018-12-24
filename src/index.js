@@ -37,6 +37,9 @@ import './index.css';
  *  import App from './example/context-simple'
  *  import App from './example/context-middle'
  *  import App from './example/context-complex'
+ *
+ *  redux 计算器(引用该组件需要注释本页面的其它store)
+ *  import App from './example/redux/redux'
  */
 
 // import App from './router'
