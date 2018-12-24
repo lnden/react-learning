@@ -11,9 +11,6 @@ import { NavLink } from 'react-router-dom'
 import './index.css'
 
 export default class PublicHeader extends Component {
-    // constructor(props){
-    //     super(props)
-    // }
     render(){
         const pagename = this.props.type
         return (
@@ -22,7 +19,7 @@ export default class PublicHeader extends Component {
                     <NavLink to="/" exact activeClassName="selected">《返回</NavLink>
                 </figure>
                 <figure className="al-indexHeaderItem">
-                    <p>{pagename}</p>
+                    <h3>{pagename}</h3>
                 </figure>
                 <figure className="al-indexHeaderItem">
 
