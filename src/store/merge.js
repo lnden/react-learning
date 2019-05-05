@@ -65,11 +65,11 @@ const rootReducer = combineReducers(allReducers);
 
 let store = createStore(rootReducer);
 
-console.log("initial state: ", store.getState());
+// console.log("initial state: ", store.getState());
 
-let unsubscribe = store.subscribe(() =>
-    console.log(store.getState())
-);
+let unsubscribe = store.subscribe(() =>{
+    // console.log(store.getState())
+});
 
 store.dispatch(addToCart('Coffee 500gm', 1, 250));
 store.dispatch(addToCart('Flour 1kg', 2, 110));

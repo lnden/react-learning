@@ -74,7 +74,7 @@ import store from './store/merge.js'
 
 ReactDOM.render(
     <Provider store={store}>
-        <App/>
+        <App name="lily"/>
     </Provider>,
     document.getElementById('root')
 );
