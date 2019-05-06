@@ -48,7 +48,8 @@ import './index.css';
 // https://github.com/pacterafe/team-react/blob/master/README.zh-CN.md
 // import App from './study-demo/component/'
 // import App from './study-demo/passByValue/'
-import App from './study-demo/event/'
+// import App from './study-demo/event/'
+import App from './study-demo/jsx/'
 
 import * as serviceWorker from './serviceWorker';
 // //引入react-redux集成
