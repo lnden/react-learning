@@ -1,0 +1,26 @@
+.container button {
+    color: #ffffff;
+}
+.container p {
+    margin-left:30px;
+}
+.container button:hover {
+    color:#ffffff;
+    opacity: 0.8;
+}
+
+.common {
+    background: #409eff;
+}
+
+.success {
+    background: #67c23a;
+}
+
+.warn {
+    background: #e6a23c;
+}
+
+.danger {
+    background: #f56c6c;
+}
