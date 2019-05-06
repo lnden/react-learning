@@ -44,7 +44,10 @@ import './index.css';
 
 // import App from './router'
 // import App from './example/official/form'
-import App from './study-demo/component/'
+
+// https://github.com/pacterafe/team-react/blob/master/README.zh-CN.md
+// import App from './study-demo/component/'
+import App from './study-demo/passByValue/'
 
 import * as serviceWorker from './serviceWorker';
 // //引入react-redux集成
