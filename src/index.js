@@ -44,7 +44,7 @@ import './index.css';
 
 // import App from './router'
 // import App from './example/official/form'
-import App from './study-demo/component'
+import App from './study-demo/component/'
 
 import * as serviceWorker from './serviceWorker';
 // //引入react-redux集成

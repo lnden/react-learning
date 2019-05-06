@@ -67,6 +67,7 @@ const ParamButton = (props) => {
 /**
  *  ES5方式 React.createClass 组件
  *  目前React使用的是16.8.6版本已经废弃该创建方式，稍后我们使用引入CDN的方式验证
+ *  ./lowVersion.html进行查看演示
  */
 
 /**
