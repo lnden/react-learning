@@ -47,15 +47,12 @@ class Son extends Component {
  */
 
 class Grandson extends Component {
-    constructor(props) {
-        super(props)
-    }
     render() {
         return (
             <section>
                 <div>我是孙子组件</div>
                 <div style={{border: '1px solid red',margin: '10px'}}>{this.props.name}：
-                    <select onChange={()=>this.props.handleSelect}>
+                    <select onChange={this.props.handleSelect}>
                         <option value="男">男</option>
                         <option value="女">女</option>
                     </select>
@@ -66,9 +63,6 @@ class Grandson extends Component {
 }
 
 class Child extends Component {
-    constructor(props) {
-        super(props)
-    }
     render() {
         return (
             <section>
@@ -77,7 +71,6 @@ class Child extends Component {
                     <input onChange={this.props.handleChange}/>
                     <Grandson name="性别" handleSelect={this.props.handleSelect}/>
                 </div>
-
             </section>
         )
     }
@@ -90,18 +83,19 @@ class Parent extends Component {
             username: '',
             sex: ''
         }
-        console.log(props)
+        this.handleChange = this.handleChange.bind(this)
+        this.handleSelect = this.handleSelect.bind(this)
     }
 
-    handleChange(value) {
+    handleChange(event) {
         this.setState({
-            username: value
+            username: event.target.value
         })
     }
 
-    handleSelect(value) {
+    handleSelect(event) {
         this.setState({
-            sex: value
+            sex: event.target.value
         })
     }
 
@@ -112,7 +106,7 @@ class Parent extends Component {
                 <div style={{border: "1px solid #000",padding: "10px"}}>
                     <div>用户姓名：{this.state.username}</div>
                     <div>用户性别：{this.state.sex}</div>
-                    <Child name="姓名" handleChange={()=>this.handleChange} handleSelect={()=>this.handleSelect}/>
+                    <Child name="姓名" handleChange={this.handleChange} handleSelect={this.handleSelect} />
                 </div>
             </section>
         )
