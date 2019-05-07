@@ -13,7 +13,7 @@ const Element = () => {
             <ul>
                 {
                     list.map((value,index)=>{
-                        return <li><p>{value}</p></li>
+                        return <li data-attr={index} key={index}><p>{value}</p></li>
                     })
                 }
             </ul>
@@ -56,8 +56,49 @@ const user = {
 }
 
 const Func = () =>
-    <div>Hhello, {formatName(user)} !</div>
+    <section>
+        <p style={title}>jsx使用函数</p>
+        <p>Hhello, {formatName(user)} !</p>
+    </section>
 
+
+// 使用Boolean属性
+const Disabled = () => {
+    return (
+        <section>
+            <p style={title}>使用Boolean属性简写方式</p>
+            <input type="button" value="按钮" disabled />
+            <input type="button" value="按钮" disabled={true} />
+            <input type="button" value="按钮" />
+            <input type="button" value="按钮" disabled={false} />
+        </section>
+    )
+}
+
+// 添加注释信息
+const personal = {
+    name: 'Tom',
+    age: 18,
+    address: 'Beijing'
+}
+const Comment = () => {
+    const { name,age,address } = personal
+    return (
+        <nav>
+            <p style={title}>添加多行备注and单行备注</p>
+            <p>
+                {/*
+                    name +
+                    age +
+                    address
+                */}
+                {
+                    name //asasas
+                }
+            </p>
+        </nav>
+    )
+}
 
 class App extends Component {
     render() {
@@ -70,6 +111,10 @@ class App extends Component {
                 <Judge />
                 <hr/>
                 <Func />
+                <hr/>
+                <Disabled />
+                <hr/>
+                <Comment />
             </section>
         )
     }

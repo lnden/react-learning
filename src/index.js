@@ -49,7 +49,9 @@ import './index.css';
 // import App from './study-demo/component/'
 // import App from './study-demo/passByValue/'
 // import App from './study-demo/event/'
-import App from './study-demo/jsx/'
+// import App from './study-demo/jsx/'
+
+import App from './study-demo/product/'
 
 import * as serviceWorker from './serviceWorker';
 // //引入react-redux集成
@@ -77,9 +79,17 @@ import { Provider } from 'react-redux'
 /** 合并redux*/
 import store from './store/merge.js'
 
+const PRODUCTS = [
+    {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},
+    {category: 'Sporting Goods', price: '$9.99', stocked: true, name: 'Baseball'},
+    {category: 'Sporting Goods', price: '$29.99', stocked: false, name: 'Basketball'},
+    {category: 'Electronics', price: '$99.99', stocked: true, name: 'iPod Touch'},
+    {category: 'Electronics', price: '$399.99', stocked: false, name: 'iPhone 5'},
+    {category: 'Electronics', price: '$199.99', stocked: true, name: 'Nexus 7'}
+];
 ReactDOM.render(
     <Provider store={store}>
-        <App name="lily"/>
+        <App products={PRODUCTS}/>
     </Provider>,
     document.getElementById('root')
 );
