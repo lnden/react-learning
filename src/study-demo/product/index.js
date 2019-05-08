@@ -33,9 +33,20 @@ class ProductCategoryRow extends Component {
 
 class ProductTable extends Component {
     render() {
+        const { filterText,inStockOnly } = this.props
+
         const rows = [];
         let lastCategory = null;
+
         this.props.products.forEach(product => {
+            if(product.name.indexOf(filterText) === -1){
+                return
+            }
+
+            if(inStockOnly && !product.stocked){
+                return
+            }
+
             if(product.category !== lastCategory) {
                 rows.push(
                     <ProductCategoryRow
@@ -68,12 +79,32 @@ class ProductTable extends Component {
 }
 
 class SearchBar extends Component {
+    /**
+     *
+     *  此处可以进行优化处理，onChange={()=>this.props.handleCheckChange(inStockOnly)}
+     *  绑定事件的方式每次点击都重新创建一下实例，浪费性能可以把绑定事件放在constructor里面初始化绑定
+     *  <input type="checkbox" checked={inStockOnly} onChange={()=>this.props.handleCheckChange(inStockOnly)}/>
+     */
+    constructor() {
+        super()
+        this.handleCheckChange = this.handleCheckChange.bind(this)
+    }
+
+    handleCheckChange(event) {
+        this.props.handleCheckChange(event.target.checked)
+    }
+    // 优化结束
+
     render() {
+        const { filterText,inStockOnly } = this.props
         return (
             <form>
-                <input type="text" placeholder="Search..." />
+                <input type="text" placeholder="Search..."  value={filterText} onChange={this.props.handleChange}/>
                 <p>
-                    <input type="checkbox"/>
+                    <input type="checkbox" checked={inStockOnly} onChange={this.handleCheckChange}/>
+                    {/*根据上面优化内容切换*/}
+                    {/*<input type="checkbox" checked={inStockOnly} onChange={()=>this.props.handleCheckChange(inStockOnly)}/>*/}
+
                     {' '}
                     Only show products in stock
                 </p>
@@ -83,11 +114,35 @@ class SearchBar extends Component {
 }
 
 class FilterableProductTable extends Component {
+    constructor() {
+        super()
+        this.state = {
+            filterText: '',
+            inStockOnly: false
+        }
+        this.handleChange = this.handleChange.bind(this)
+        this.handleCheckChange = this.handleCheckChange.bind(this)
+    }
+
+    handleChange(event){
+        this.setState({
+            filterText: event.target.value
+        })
+    }
+
+    handleCheckChange(value){
+        this.setState({
+            // inStockOnly: !value
+            // 根据上面优化内容切换
+            inStockOnly: value
+        })
+    }
+
     render() {
         return (
             <section>
-                <SearchBar />
-                <ProductTable products={this.props.products}/>
+                <SearchBar {...this.state} handleChange={this.handleChange} handleCheckChange={this.handleCheckChange} />
+                <ProductTable products={this.props.products}  {...this.state} />
             </section>
         )
     }

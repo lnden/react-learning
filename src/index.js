@@ -50,9 +50,7 @@ import './index.css';
 // import App from './study-demo/passByValue/'
 // import App from './study-demo/event/'
 // import App from './study-demo/jsx/'
-
 import App from './study-demo/product/'
-
 import * as serviceWorker from './serviceWorker';
 // //引入react-redux集成
 import { Provider } from 'react-redux'
