@@ -14,10 +14,8 @@ class Clock extends Component {
     }
 
     componentDidMount(){
-        this.timerID = setInterval(
-            () => this.tick(),
-            1000
-        );
+        this.timerID = setInterval(() =>
+            this.tick(), 1000);
     }
     componentWillMount(){
         clearInterval(this.timerID)
@@ -46,7 +44,6 @@ export default class App extends Component {
             <div>
                 <Clock/>
             </div>
-
         )
     }
 }

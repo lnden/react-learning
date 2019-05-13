@@ -10,6 +10,7 @@
 import React, { Component } from 'react'
 
 
+// example 1 [ 条件判断 ]
 function UserGreeting(){
     return <h1>Welcome Back!</h1>
 }
@@ -39,10 +40,7 @@ class Render extends Component {
 
 
 
-
-
-
-
+// example 2 [ 元素变量 ]
 function LoginButton(props){
     return (
         <button onClick={props.onClick}>
@@ -58,7 +56,6 @@ function LogoutButton(props){
         </button>
     )
 }
-
 
 class LoginController extends Component {
     constructor(props){
@@ -78,6 +75,7 @@ class LoginController extends Component {
     render(){
         const isLoggedIn = this.state.isLoggedIn;
         let button;
+        // 三目运算符
         if(isLoggedIn){
             button = <LogoutButton onClick={this.handleLogoutClick} />;
         }else{
@@ -96,7 +94,7 @@ class LoginController extends Component {
 
 
 
-
+// example 3 [ 与运算符 && ] 如果条件是 true，&& 右侧的元素就会被渲染，如果是 false，React 会忽略并跳过它。
 function Mailbox(props){
     const unreadMessages = props.unreadMessages;
     return (
@@ -124,6 +122,7 @@ class Mailboxs extends Component {
 
 
 
+// example 4 [ 阻止组件渲染 ]
 function WarningBanner(props){
     if(!props.warn){
         return null

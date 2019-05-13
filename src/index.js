@@ -1,6 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import * as serviceWorker from './serviceWorker';
+// //引入react-redux集成
+import { Provider } from 'react-redux'
+/** 合并redux*/
+import store from './store/merge.js'
 
 /**
  *  React之道 TODO-LIST
@@ -44,20 +49,28 @@ import './index.css';
 
 // import App from './router'
 // import App from './example/official/form'
+import App from './example/official/list'
 
-// https://github.com/pacterafe/team-react/blob/master/README.zh-CN.md
+//react学习计划 https://github.com/pacterafe/team-react/blob/master/README.zh-CN.md
+
 // import App from './study-demo/component/'
 // import App from './study-demo/passByValue/'
 // import App from './study-demo/event/'
 // import App from './study-demo/jsx/'
-
 // React 哲学
 // import App from './study-demo/product/'
 // React Tic-Tac-Toe
-import App from './study-demo/tic-tac-toe/'
-import * as serviceWorker from './serviceWorker';
-// //引入react-redux集成
-import { Provider } from 'react-redux'
+// import App from './study-demo/tic-tac-toe/'
+const PRODUCTS = [
+    {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},
+    {category: 'Sporting Goods', price: '$9.99', stocked: true, name: 'Baseball'},
+    {category: 'Sporting Goods', price: '$29.99', stocked: false, name: 'Basketball'},
+    {category: 'Electronics', price: '$99.99', stocked: true, name: 'iPod Touch'},
+    {category: 'Electronics', price: '$399.99', stocked: false, name: 'iPhone 5'},
+    {category: 'Electronics', price: '$199.99', stocked: true, name: 'Nexus 7'}
+];
+
+// 结束
 
 /** 拆分redux
  *
@@ -78,17 +91,7 @@ import { Provider } from 'react-redux'
  *
  */
 
-/** 合并redux*/
-import store from './store/merge.js'
 
-const PRODUCTS = [
-    {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},
-    {category: 'Sporting Goods', price: '$9.99', stocked: true, name: 'Baseball'},
-    {category: 'Sporting Goods', price: '$29.99', stocked: false, name: 'Basketball'},
-    {category: 'Electronics', price: '$99.99', stocked: true, name: 'iPod Touch'},
-    {category: 'Electronics', price: '$399.99', stocked: false, name: 'iPhone 5'},
-    {category: 'Electronics', price: '$199.99', stocked: true, name: 'Nexus 7'}
-];
 ReactDOM.render(
     <Provider store={store}>
         <App products={PRODUCTS}/>

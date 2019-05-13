@@ -25,7 +25,8 @@ class App extends Component {
         return (
             <section>
                 <p>{this.state.message}</p>
-                <button onClick={this.setMessage.bind(this,'测试')}>绑定事件传值</button>
+                <button onClick={(e)=>this.setMessage('测试',e)}>绑定事件传值方式一</button>
+                <button onClick={this.setMessage.bind(this,'测试')}>绑定事件传值方式二 </button>
             </section>
         )
     }
