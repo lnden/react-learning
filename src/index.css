@@ -9,4 +9,6 @@ button:hover { color: #222; }
 section{padding:20px }
 *:focus { outline: none; }
 .FancyBorder-blue{border:10px solid #f00 }
-.Contacts{background:#f00;width:100px;height:100px; }
+.SplitPane {border:1px solid #f00;overflow: auto}
+.SplitPane-left{background:#f00;width:100px;height:100px; float:left}
+.SplitPane-right{background:#009ee6;width:100px;height:100px; float:right}

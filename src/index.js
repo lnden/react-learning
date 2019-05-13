@@ -19,13 +19,7 @@ import store from './store/merge.js'
  *  import App from './example/todolist/Api'
  *
  *  官方基础知识
- *  import App from './example/official/clock'
- *  import App from './example/official/extends'
- *  import App from './example/official/form'
- *  import App from './example/official/props'
- *  import App from './example/official/render'
- *  import App from './example/official/state'
- *  import App from './example/official/toggle'
+ *  import App from './example/official/..'
  *
  *  React路由4.0
  *  import App from './example/router'
@@ -47,9 +41,8 @@ import store from './store/merge.js'
  *  import App from './example/redux/redux'
  */
 
-// import App from './router'
-// import App from './example/official/form'
-import App from './example/official/list'
+import App from './example/lifecycle'
+
 
 //react学习计划 https://github.com/pacterafe/team-react/blob/master/README.zh-CN.md
 

@@ -34,11 +34,11 @@ function WelcomeDialog(){
 
 // example 2
 function Contacts() {
-    return <div className="Contacts" />;
+    return <div className="Contacts">我是Contacts</div>;
 }
 
 function Chat() {
-    return <div className="Chat" />;
+    return <div className="Chat">我是Chat</div>;
 }
 
 function SplitPane(props) {

@@ -9,7 +9,7 @@
 import React, { Component } from 'react'
 
 
-// example 1
+// example 1 [ 受控组件 ]
 class NameForm extends Component {
     constructor(props){
         super(props);
@@ -44,8 +44,83 @@ class NameForm extends Component {
     }
 }
 
+// example 2 [ textarea标签 ]
+class TextareaForm extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            value: 'Please write an essay about your favorite DOM element'
+        };
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
 
-// example 2
+    handleChange(event){
+        this.setState({
+            value:event.target.value
+        })
+    }
+    handleSubmit(event){
+        alert('An essay was submitted: '+this.state.value);
+        event.preventDefault();
+    }
+
+    render(){
+        return (
+            <form onSubmit={this.handleSubmit}>
+                <label>
+                    Essay:
+                    <textarea value={this.state.value} onChange={this.handleChange} />
+                </label>
+                <input type="submit" value="Submit"/>
+            </form>
+        )
+    }
+}
+
+
+// example 3 [ select标签 ]
+class SelectForm extends Component {
+    constructor(props){
+        super(props);
+        this.state = {value:'coconut'};
+
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleChange(event){
+        this.setState({
+            value:event.target.value
+        })
+    }
+
+    handleSubmit(event){
+        alert('Your favorite flavor is:'+this.state.value)
+        event.preventDefault();
+    }
+
+    // 多选的情况可以使用 <select multiple={true} value={['B', 'C']}>
+    render(){
+        return (
+            <form onSubmit={this.handleSubmit}>
+                <label>
+                    Pick your favorite flavor:
+                    <select value={this.state.value} onChange={this.handleChange}>
+                        <option value="grapefruit">Grapefruit</option>
+                        <option value="line">Line</option>
+                        <option value="coconut">Coconut</option>
+                        <option value="mango">Mango</option>
+                    </select>
+                </label>
+                <input type="submit" value="Submit"/>
+            </form>
+        )
+    }
+}
+
+
+// example 4
 class RadioForm extends Component {
     constructor(){
         super();
@@ -77,48 +152,7 @@ class RadioForm extends Component {
     }
 }
 
-// example 3
-class SelectForm extends Component {
-    constructor(props){
-        super(props);
-        this.state = {value:'coconut'};
-
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-    }
-
-    handleChange(event){
-        this.setState({
-            value:event.target.value
-        })
-    }
-
-    handleSubmit(event){
-        alert('Your favorite flavor is:'+this.state.value)
-        event.preventDefault();
-    }
-
-
-
-    render(){
-        return (
-            <form onSubmit={this.handleSubmit}>
-                <label>
-                    Pick your favorite flavor:
-                    <select value={this.state.value} onChange={this.handleChange}>
-                        <option value="grapefruit">Grapefruit</option>
-                        <option value="line">Line</option>
-                        <option value="coconut">Coconut</option>
-                        <option value="mango">Mango</option>
-                    </select>
-                </label>
-                <input type="submit" value="Submit"/>
-            </form>
-        )
-    }
-}
-
-// example 4
+// example 5
 class CheckboxForm extends Component{
     constructor(){
         super();
@@ -175,39 +209,7 @@ class CheckboxForm extends Component{
         )
     }
 }
-// example 5
-class TextareaForm extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            value: 'Please write an essay about your favorite DOM element'
-        };
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-    }
 
-    handleChange(event){
-        this.setState({
-            value:event.target.value
-        })
-    }
-    handleSubmit(event){
-        alert('An essay was submitted: '+this.state.value);
-        event.preventDefault();
-    }
-
-    render(){
-        return (
-            <form onSubmit={this.handleSubmit}>
-                <label>
-                    Essay:
-                    <textarea value={this.state.value} onChange={this.handleChange} />
-                </label>
-                <input type="submit" value="Submit"/>
-            </form>
-        )
-    }
-}
 
 // example 6
 class Reservation extends Component {
@@ -260,9 +262,11 @@ class Reservation extends Component {
 }
 
 // export default NameForm;
-// export default RadioForm;
-// export default SelectForm;
-// export default CheckboxForm;
 // export default TextareaForm;
+// export default SelectForm;
+
+// export default RadioForm;
+// export default CheckboxForm;
 export default Reservation
+
 

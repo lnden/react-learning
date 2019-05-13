@@ -13,13 +13,17 @@ const scaleNames = {
     f: 'Fahrenheit'
 };
 
+// 转换为摄氏度
 function toCelsius(fahrenheit) {
     return (fahrenheit - 32) * 5 / 9;
 }
 
+
+// 转换为华氏度
 function toFahrenheit(celsius) {
     return (celsius * 9 / 5) + 32;
 }
+
 
 function tryConvert(temperature, convert) {
     const input = parseFloat(temperature);
@@ -31,6 +35,8 @@ function tryConvert(temperature, convert) {
     return rounded.toString();
 }
 
+
+// 水是否沸腾判断
 function BoilingVerdict(props) {
     if (props.celsius >= 100) {
         return <p>The water would boil.</p>;
