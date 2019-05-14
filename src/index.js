@@ -41,7 +41,7 @@ import store from './store/merge.js'
  *  import App from './example/redux/redux'
  */
 
-import App from './example/context/context-simple.js'
+import App from './example/context/context-middle.js'
 
 //react学习计划 https://github.com/pacterafe/team-react/blob/master/README.zh-CN.md
 

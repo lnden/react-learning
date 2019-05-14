@@ -65,13 +65,18 @@ function Button(){
 }
 
 // class Button extends Component {
-//     static contextType = ThemeContext
+//     static contextType = ThemeContext 实验性语法
 //
 //     render(){
 //         console.log(this.context)
 //         return <button className={this.context}>MainContent => PublicHeader => Button</button>
 //     }
 // }
+
+
+//还可以使用另一种方式
+// Button.contextType = ThemeContext //推荐使用语法
+
 
 class ChangeButton extends Component{
     constructor(){
@@ -81,8 +86,9 @@ class ChangeButton extends Component{
 
     handlerChange(){
         console.log("%c%c准备重新分发context %c请查看context-","line-height:28px;","color:#f00","color:#090")
+        console.log(this.context)
     }
-
+    static contextType = ThemeContext
     render(){
         return (
             <button className="changebtn" onClick={this.handlerChange}>修改搜索按钮颜色</button>

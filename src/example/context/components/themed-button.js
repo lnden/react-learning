@@ -14,7 +14,6 @@ function ThemedButton(props){
         <ThemeContext.Consumer>
             {
                 theme => {
-                    console.log(theme,1111111111111)
                     return (
                         <button {...props} style={{backgroundColor:theme.background}}>我是Themed-button</button>
                     )
