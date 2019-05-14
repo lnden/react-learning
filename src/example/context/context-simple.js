@@ -9,6 +9,10 @@
 import React, { Component } from 'react'
 import './index.css'
 
+
+// const MyContext = React.createContext(defaultValue);
+// defaultValue 只有 在“Consumer”组件找不到Provider组件时，才会被使用。
+
 const ThemeContext = React.createContext('light');
 
 export default class App extends Component {
@@ -50,6 +54,7 @@ function Button(){
         <ThemeContext.Consumer>
             {
                 theme => {
+                    console.log(theme)
                     return (
                         <button className={theme}>MainContent => PublicHeader => Button</button>
                     )
@@ -58,6 +63,15 @@ function Button(){
         </ThemeContext.Consumer>
     )
 }
+
+// class Button extends Component {
+//     static contextType = ThemeContext
+//
+//     render(){
+//         console.log(this.context)
+//         return <button className={this.context}>MainContent => PublicHeader => Button</button>
+//     }
+// }
 
 class ChangeButton extends Component{
     constructor(){
