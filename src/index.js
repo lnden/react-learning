@@ -41,8 +41,6 @@ import store from './store/merge.js'
  *  import App from './example/redux/redux'
  */
 
-import App from './example/context/context-middle.js'
-
 //react学习计划 https://github.com/pacterafe/team-react/blob/master/README.zh-CN.md
 
 // import App from './study-demo/component/'
@@ -53,6 +51,9 @@ import App from './example/context/context-middle.js'
 // import App from './study-demo/product/'
 // React Tic-Tac-Toe
 // import App from './study-demo/tic-tac-toe/'
+// Context的使用
+import App from './study-demo/context/simple.js'
+
 const PRODUCTS = [
     {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},
     {category: 'Sporting Goods', price: '$9.99', stocked: true, name: 'Baseball'},
