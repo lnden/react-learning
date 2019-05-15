@@ -24,13 +24,24 @@ function Toolbar() {
         <section>
             <ThemeButtonOne />
             <br/>
-            <ThemeButtonTow />
+            <ThemeButtonTwo />
+            <br/>
+            <ThemeButtonThree />
         </section>
     )
 }
 
-
+// 第一种方式
 class ThemeButtonOne extends Component {
+    render() {
+        return <button className={this.context}>测试按钮</button>
+    }
+}
+ThemeButtonOne.contextType = ThemeContext
+
+
+// 第二种方式
+class ThemeButtonTwo extends Component {
     // 3、指定 contextType 读取当前的 theme context
     //    React 会往上找到最近的 theme Provider 然后使用它的值
     //    在这个例子中， 当前 theme 值为 dark
@@ -42,8 +53,9 @@ class ThemeButtonOne extends Component {
 }
 
 
+// 第三种方式
 // 备注信息：还可以使用另外一种方式获取传递过来的 theme 值
-class ThemeButtonTow extends Component {
+class ThemeButtonThree extends Component {
     render() {
        return (
            <ThemeContext.Consumer>
@@ -56,5 +68,6 @@ class ThemeButtonTow extends Component {
        )
     }
 }
+
 
 export default App
