@@ -21,7 +21,13 @@ class App extends Component {
         console.log(nextProps,1)
         console.log(nextState,2)
         console.log('%c shouldComponentUpdate结束','color:#cddc39')
-        return false
+        return true
+    }
+
+
+    getSnapshotBeforeUpdate(prevProps, prevState) {
+        console.log(prevProps,prevState)
+        return null
     }
 
     componentDidUpdate() {
