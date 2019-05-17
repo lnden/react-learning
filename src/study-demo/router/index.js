@@ -1,9 +1,21 @@
 import React from 'react'
-import { BrowserRouter as Router,Route,Link } from 'react-router-dom'
+import { BrowserRouter as Router,HashRouter,Route,Link } from 'react-router-dom'
+
+//把BrowserRouter转换为Router
+/**
+ *
+ *  @param
+ *      BrowserRputer
+ *      HashRouter
+ *      Router
+ *      Route
+ *      Link
+ *
+ */
 
 const BasicExample = () => {
     return (
-        <Router>
+        <HashRouter>
             <section>
                 <ul>
                     <li><Link to="/">主页</Link></li>
@@ -17,7 +29,7 @@ const BasicExample = () => {
                 <Route path="/about" component={About}/>
                 <Route path="/topics" component={Topics}/>
             </section>
-        </Router>
+        </HashRouter>
     )
 };
 
