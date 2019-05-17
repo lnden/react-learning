@@ -52,7 +52,7 @@ import store from './store/merge.js'
 // React Tic-Tac-Toe
 // import App from './study-demo/tic-tac-toe/'
 // Context的使用
-import App from './study-demo/lifecycle/'
+import App from './study-demo/router/'
 
 const PRODUCTS = [
     {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},
