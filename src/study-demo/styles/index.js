@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import './index.css'
 import classnames from 'classnames'
-import styles from './style'
 
 
 export default class App extends Component {
