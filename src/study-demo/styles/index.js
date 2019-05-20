@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './index.css'
-import classNames from 'classnames'
+import classnames from 'classnames'
 import styles from './style'
 
 
@@ -62,15 +62,23 @@ const ClassName = () =>
 
 
 // 4、使用class类名绑定多个class
-const MultipleClass = () =>
-    <section>
-        {/*<article className={`${styles.myStyle} ${value.n}`}>*/}
-            {/*多个class同时绑定，这个使用需要使用classnames插件*/}
-        {/*</article>*/}
-        <article style={styles.myStyle}>
-            style 使用引入对象方式
-        </article>
-    </section>
+class MultipleClass extends Component {
+    render() {
+        let btnClass = classnames({
+            btn:true,
+            'btn-pressed': true,
+            'btn-cover': true
+        })
+        // let btnClass = classnames('btn', 'btn-pressed','btn-cover')
+
+        return (
+            <section>
+                <h1>使用classnames</h1>
+                <button className={btnClass}>测试样式</button>
+            </section>
+        )
+    }
+}
 
 
 /**
