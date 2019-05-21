@@ -100,6 +100,20 @@ const Comment = () => {
     )
 }
 
+
+// 不使用jsx使用语法糖
+class Hello extends Component {
+    render() {
+        return <div>Hello, {this.props.toWhat}</div>
+    }
+}
+
+class Hellos extends Component {
+    render() {
+        return React.createElement('div',null,`Hellos ${this.props.toWhat}`)
+    }
+}
+
 class App extends Component {
     render() {
         return (
@@ -115,6 +129,10 @@ class App extends Component {
                 <Disabled />
                 <hr/>
                 <Comment />
+                <hr />
+                <Hello toWhat="Tom"/>
+                <hr/>
+                <Hellos toWhat="Lucy"/>
             </section>
         )
     }
