@@ -108,11 +108,25 @@ class Hello extends Component {
     }
 }
 
+
+/**
+ * 使用 React.createElement() 语法糖创建Jsx
+ *      1、标签属性
+ *      2、组件上绑定属性或者是class/style
+ *      3、标签内展示的value值
+ *
+ *      ReactDom.render(
+ *          React.createElement(Hello, { toWhat:'World' },null),
+ *          document.getElementById('root')
+ *      )
+ *
+ */
 class Hellos extends Component {
     render() {
         return React.createElement('div',null,`Hellos ${this.props.toWhat}`)
     }
 }
+
 
 class App extends Component {
     render() {
