@@ -48,7 +48,14 @@ class App extends Component {
         // console.log(nextProps,1)
         // console.log(nextState,2)
         console.log('%c shouldComponentUpdate结束555555555555','color:#cddc39')
-        return true
+        if (this.props.color !== nextProps.color) {
+            return true;
+          }
+          if (this.state.count !== nextState.count) {
+            return true;
+          }
+        //   return false;
+          return true;
     }
 
     componentDidUpdate() {
