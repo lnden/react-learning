@@ -25,6 +25,7 @@ class App extends Component {
         console.log('！暂不关注该生命周期222222222222')
         // console.log(props)
         // console.log(state)
+        // 根据props返回一个新的state或者是null
         if(false){
             return {
                 name: 'lnden',
@@ -36,6 +37,7 @@ class App extends Component {
     getSnapshotBeforeUpdate(prevProps, prevState) {
         console.log('！暂不关注该生命周期666666666666')
         // console.log(prevProps,prevState)
+        // 可以使用上一个props,state和当前相比较
         return null
     }
 

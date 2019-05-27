@@ -87,6 +87,48 @@ class Parent extends Component {
         )
     }
 }
+
+
+//  回调Refs，React支持另一种设置Refs的方式，称为"回调refs"----未理解---------------------------------
+class CustomTextInputs extends Component {
+    constructor(props) {
+        super(props)
+        this.textInput = null;
+        
+        this.setTextInputRef = element => {
+            this.textInput = element
+        }
+
+        this.focusTextInput = () => {
+            // console.log('进入函数')
+            // 使用原生DOM API 使text输入框获得焦点
+            if(this.textInput) this.textInput.focus()
+        }
+    }   
+
+    componentDidMount() {
+        // console.log('test~')
+        // 组件挂在后，让文本框自动获得焦点
+        this.focusTextInput()
+    }
+
+    render() {
+        return (
+            <section>
+                <input
+                    type="text"
+                    ref={this.setTextInputRef} />
+                <br/>
+                <input 
+                    type="button" 
+                    value="Focus the text input"
+                    onClick={this.focusTextInput} />
+            </section>
+        )
+    }
+}
+
 // export default MyComponent
 // export default CustomTextInput
-export default AutoFocusTextInput
+// export default AutoFocusTextInput
+export default CustomTextInputs
