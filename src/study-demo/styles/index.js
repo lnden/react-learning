@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import './index.css'
 import classnames from 'classnames'
+import './base.scss'
+import styles from './container.module.scss'
 
 
 export default class App extends Component {
@@ -17,6 +19,10 @@ export default class App extends Component {
                     <ClassName />
                     <hr/>
                     <MultipleClass />
+                    <hr/>
+                    <Container />
+                    <hr/>
+                    <Module />
                 </main>
             </section>
         )
@@ -79,6 +85,30 @@ class MultipleClass extends Component {
     }
 }
 
+// 5.使用scss进行样式编辑
+class Container extends Component {
+    render() {
+        return (
+            <section>
+                <p className="title">撒大声地啥多
+                    <span className="test">测测额</span>
+                </p>
+            </section>
+        )
+    }
+}
+
+// 6.使用模块化样式
+
+class Module extends Component {
+    render() {
+        return (
+            <section>
+                <p className={styles.title}>测试啥哎啥</p>
+            </section>
+        )
+    }
+}
 
 /**
  *  讨论React组件引用样式的几种方式
