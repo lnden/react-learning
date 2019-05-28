@@ -1,0 +1,9 @@
+/* 引入所有的样式文件，统一出口，去中心化 */
+
+@import 'base.css';
+@import 'normalize.css';
+@import 'container.scss';
+@import 'layout.scss';
+@import 'mixins.scss';
+@import 'variable.scss';
+
