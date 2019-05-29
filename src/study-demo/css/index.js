@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './index.css'
 import classnames from 'classnames'
+import styles from './style.js'
 
 export default class App extends Component {
     render() {
@@ -73,6 +74,7 @@ class MultipleClass extends Component {
             <section>
                 <h1>使用classnames</h1>
                 <button className={btnClass}>测试样式</button>
+                <span style={styles.myStyle}>真正需要展示的内容</span>
             </section>
         )
     }
