@@ -1,31 +1,7 @@
 import  React, { Component } from 'react'
-import styled from 'styled-components'
 
+import { Wrapper,Title,MainInner,Item,Button,TomatoButton,Thing,Input,Rotate } from './styles.js'
 
-const Title = styled.h1`
-    font-size: 30px;
-    text-align: center;
-    color: red;
-    border:1px solid #f00;
-`
-
-const Wrapper = styled.section`
-    padding: 40px;
-    background: white;
-    border:1px solid #090;
-`
-
-const MainInner = styled.main`
-    border: 1px solid #f00;
-    margin: 20px;
-    h1{
-        border: 2px solid #f00;
-        margin: 20px;
-    }
-    .context {
-        color: #f00;
-    }
-`
 
 class App extends Component {
     render() {
@@ -37,7 +13,22 @@ class App extends Component {
                 <MainInner>
                     <h1>我是标题H1，styled-components使用的另一种方式</h1>
                     <p className="context">test数据答案啥啥所</p>
+                    <ul>
+                        <li>这是一条普通的Li</li>
+                        <Item underline>这条记录有一天下划线 </Item>
+                    </ul>
                 </MainInner>
+                <main>
+                    <Button>被继承按钮的样式</Button>  
+                    <TomatoButton>继承按钮的样式</TomatoButton>
+                    <Thing>Hello,world</Thing>   
+                    <div>
+                        <Input placeholder="A small text input" size="1em" type="text"/>
+                        <br />
+                        <Input placeholder="A bigger text input" size="1em" />
+                    </div>
+                    <Rotate>&lt; 💅 &gt;</Rotate>
+                </main>
             </section>
         )
     }
