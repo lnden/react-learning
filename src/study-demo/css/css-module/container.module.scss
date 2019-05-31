@@ -1,3 +1,62 @@
+
+
+//  1、局部作用域
 .title{
-    color:#f00
+    color:#f00;
+}
+
+//  2、全局作用域
+:global(.title){
+    color: green;
+}
+
+//  3、class组件继承
+.publicFont{
+    color: #909;
+    background: #aaa;
+}
+.subtitle{
+    composes: publicFont;
+    color: red;
+}
+
+//  4、输入其他模块
+.importModule {
+    composes: publicColor from './public.css';
+    color: #909;
+}
+
+//  5、输入变量
+@value colors: "./variable.css";
+@value primary, success, info, warning, danger,z-white  from colors;
+
+.variable {
+    color: primary
+}
+.color {
+    color: z-white;
+}
+.primaryBtn {
+    background: primary;
+    composes: color;
+}
+
+.successBtn {
+    background: success;
+    composes: color;
+}
+
+.infoBtn {
+    background: info;
+    composes: color;
+}
+
+.warningBtn {
+    background: warning;
+    composes: color;
+}
+
+.dangerBtn {
+    background: danger;
+    composes: color;
 }
