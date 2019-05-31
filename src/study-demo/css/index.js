@@ -82,7 +82,8 @@ class MultipleClass extends Component {
 
 /**
  *  讨论React组件引用样式的几种方式
- *      1、使用行内样式
- *      2、使用行内样式对象
- *      2、使用class样式
+ *      1、使用行内样式绑定
+ *      2、使用行内样式对象方式绑定
+ *      3、使用class类名样式绑定
+ *      4、使用class类名绑定多个class
  */
