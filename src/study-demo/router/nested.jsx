@@ -38,12 +38,12 @@ function Topics({match}){
                     <Link to={`${match.url}/components`}>Components</Link>
                 </li>
                 <li>
-                    <Link to={`${match.url}/props-v-state`}>Props v. State</Link>
+                    <Link to={`${match.path}/props-v-state`}>Props v. State</Link>
                 </li>
             </ul>
 
             <Route exact path={match.path} render={()=><h3>Please select a topic</h3>} /> 
-            {/* <Route exact path={match.path} component={defaultValue} />  */}
+            <Route exact path={match.path} component={defaultValue} /> 
             <Route path={`${match.path}/:id`} component={Topic} />    
         </div>
     )
