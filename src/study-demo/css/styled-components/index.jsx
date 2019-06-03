@@ -27,7 +27,7 @@ class App extends Component {
                         <br />
                         <Input placeholder="A bigger text input" size="1em" />
                     </div>
-                    <Rotate>&lt; 💅 &gt;</Rotate>
+                    <Rotate>&lt; 💅 &gt;</Rotate> <b>//该语句控制台有报错</b>
                 </main>
             </section>
         )

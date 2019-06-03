@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 import './index.css'
 
+/**
+ *  层层传递props值的演示
+ */
+
 class App extends Component {
     render() {
         return <Toolbar theme="green" />

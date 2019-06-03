@@ -1,6 +1,16 @@
 import React, { Component } from 'react'
 import './index.css'
-// 使用context的具体步骤
+
+/**
+ *  context API详解
+ *      1、React.createContext  创建context对象   const MyContext = React.createContext(defaultValue)
+ *      2、Context.Provider     每个Context对象都会返回一个Provider React组件 <MyContext.Provider value={某个值}>
+ *      3、Class.contextType    挂载在 Class 上的tontextType 属性会被赋值为一个由React.createContext创建的Context对象，class内可以拿到this.context
+ *      4、Context.Consumer     这个函数可以接受当前context值，返回一个React节点
+ */
+
+
+ // 使用context的具体步骤
 
 // 1、创建一个 context 且设定默认值 [ 默认值执行条件是 是否存在ThemeContext.Provider ]
 const ThemeContext = React.createContext('light');
