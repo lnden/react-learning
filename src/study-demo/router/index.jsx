@@ -1,5 +1,5 @@
 import React from 'react'
-import { HashRouter as Router, Route, Link, NavLink } from 'react-router-dom'
+import { HashRouter as Router, Route, Link, NavLink, Redirect, Switch } from 'react-router-dom'
 import './index.css'
 //把 BrowserRouter 转换为 Router
 //把 HashRouter 转换为 Router
@@ -7,7 +7,7 @@ import './index.css'
 /**
  *
  *  @param
- *      BrowserRputer
+ *      BrowserRouter
  *          - basename: string | <BrowserRouter basename="/calendar"/>  <Link to="/today"/>  // renders <a href="/calendar/today">
  *          - forceRefresh: bool | forceRefresh={!supportsHistory}  const supportsHistory = 'pushState' in window.history   // true切换页面使用全页刷新，该方法在不支持H5历史记录浏览器中使用
  * 
@@ -76,6 +76,11 @@ const isActive = () =>
     </section>
 
 
+const newArray = () => 
+    <section>
+        <h3>我是新newArray</h3>
+        <main>我是新的newArray内容</main>
+    </section>
 
 // -------------------------------------------------------------------------------
 const BasicExample = () => {
@@ -125,16 +130,22 @@ const BasicExample = () => {
                     >activeStyle属性</NavLink>
                     <br/>
                     <NavLink to="/isActive/123" isActive={oddEvent} >isActive属性</NavLink>
+                    <br/>
+                    <NavLink to="/users/12">newArray属性</NavLink>
+                    <NavLink to="/profile/12">newArray属性</NavLink>
                 </ul>
 
                 <hr/>
-
-                <Route exact path="/" component={Home}/>
-                <Route path="/about" component={About}/>
-                <Route path="/topics" component={Topics}/>
-                <Route path="/activeClassName" component={activeClassName}/>
-                <Route path="/activeStyle" component={activeStyle}/>
-                <Route path="/isActive" component={isActive}/>
+                <Switch>
+                    <Route exact path="/" component={Home}/>
+                    <Route path="/about" component={About}/>
+                    <Route path="/topics" component={Topics}/>
+                    <Route path="/activeClassName" component={activeClassName}/>
+                    <Route path="/activeStyle" component={activeStyle}/>
+                    <Route path="/isActive" component={isActive}/>
+                    <Route path={["/users/:id", "/profile/:id"]} component={newArray} />
+                    <Redirect to="/" /> 
+                </Switch>
             </section>
         </Router>
     )
