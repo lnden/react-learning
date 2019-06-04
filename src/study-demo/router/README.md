@@ -13,7 +13,12 @@ React Router 遵循了React的理念: 万物皆组件。因此BrowserRouter、Ha
 
 ## 主要组件的简介
 
-- BrowserRouter 使用 HTML5 提供的 history API 来保持 UI 和 URL 的同步；
+- BrowserRouter [BrowserRouter](./Browser-router.jsx)使用 HTML5 提供的 history API 来保持 UI 和 URL 的同步；
+  - basename: string
+  - getUserConfirmation: func
+  - forceRefresh: bool
+  - keyLength: number
+  - children: node 
 - HashRouter    使用 URL 的 hash (例如：window.location.hash) 来保持 UI 和 URL 的同步；
 - Route 
   - Route render methods [route-render](./Route-render.jsx) 
