@@ -16,18 +16,20 @@ React Router 遵循了React的理念: 万物皆组件。因此BrowserRouter、Ha
 - BrowserRouter 使用 HTML5 提供的 history API 来保持 UI 和 URL 的同步；
 - HashRouter    使用 URL 的 hash (例如：window.location.hash) 来保持 UI 和 URL 的同步；
 - Route 
-  - Route render methods [RouteRender](./Route.jsx) 
-    - <Route component={Home}>
-    - <Route render={()=><h3>Title标题</h3>}>
-    - <Route children>
-  - Route props [RouteProps](./Route-params.jsx) 
+  - Route render methods [route-render](./Route-render.jsx) 
+    - `<Route component={Home}>`
+    - `<Route render={()=><h3>Title标题</h3>}>`
+    - `<Route children>`
+  - Route props 
     - match
     - location
-    - history 
-  - path
-  - exact
-  - strict
-  - location.pathname
+    - history
+  - Route params [route-params](./Route-params.jsx) 
+    - path
+    - exact
+    - strict
+    - location
+    - sensitive
 - Link
 - NavLink
 - Switch
