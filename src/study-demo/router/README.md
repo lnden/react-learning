@@ -19,13 +19,13 @@ React Router 遵循了React的理念: 万物皆组件。因此BrowserRouter、Ha
   - forceRefresh: bool
   - keyLength: number
   - children: node 
-- HashRouter    使用 URL 的 hash (例如：window.location.hash) 来保持 UI 和 URL 的同步；
+- HashRouter [HashRouter](./Hash-router.jsx)  使用 URL 的 hash (例如：window.location.hash) 来保持 UI 和 URL 的同步；
 - Route 
   - Route render methods [route-render](./Route-render.jsx) 
     - `<Route component={Home}>`
     - `<Route render={()=><h3>Title标题</h3>}>`
     - `<Route children>`
-  - Route props 
+  - Route props [route-render](./Route-render.jsx) 
     - match
     - location
     - history
@@ -35,7 +35,13 @@ React Router 遵循了React的理念: 万物皆组件。因此BrowserRouter、Ha
     - strict
     - location
     - sensitive
-- Link
+- Link  [Link]('./Link.jsx')
+  - to: string
+  - to: object
+  - replace: string
+  - innerRef: function
+  - innerRef: RefObject
+  - others 
 - NavLink
 - Switch
 - Redirect
