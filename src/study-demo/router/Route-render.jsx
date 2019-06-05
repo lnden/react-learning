@@ -6,7 +6,7 @@ class App extends Component {
         return (
             <Router>
                 <section>
-                    <h3>Route的详细介绍</h3>
+                    <h1>Route 的详细介绍</h1>
                     <ul>
                         <li><Link to="/">返回首页</Link></li>
                         <li><Link to="/discover/21">发现页面[component]</Link></li>
@@ -99,10 +99,10 @@ function Home({match,location,history}) {
     // console.log('match：',match)
     // console.log('location：',location)
     // console.log('history：',history)
-    return <h1>Home Page</h1>
+    return <h3>Home Page</h3>
 }
 
 function Discover({match}) {
-    return <h1>Discover Page,{match.params.id}</h1>
+    return <h3>Discover Page,{match.params.id}</h3>
 }
 export default App

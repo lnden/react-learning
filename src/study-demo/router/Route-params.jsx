@@ -7,7 +7,7 @@ class App extends Component {
         return (
             <Router>
                 <section>
-                    <h3>RouteParams的详细介绍</h3>
+                    <h1>RouteParams 的详细介绍</h1>
                     <ul>
                         <li><Link to="/">首页</Link></li>
                         <li><Link to="/users/users">Path使用方式一</Link></li>
@@ -77,7 +77,7 @@ function Home() {
     return (
         <div>
             <span>1、path: string</span>
-            <h1>Home Page</h1>
+            <h3>Home Page</h3>
         </div>
     )
 }
@@ -86,7 +86,7 @@ function Discover({match}) {
     return (
         <div>
             <span>1、path: string[]</span>
-            <h1>Discover Page => <span style={{color:'#909'}}>{match.params.id}</span></h1>
+            <h3>Discover Page => <span style={{color:'#909'}}>{match.params.id}</span></h3>
         </div>
     )
 }

@@ -26,6 +26,7 @@ class App extends Component {
         return (
             <Router>
                 <section>
+                    <h1>Link 的详细介绍</h1>
                     <Headers />
                     <Content />
                 </section>
@@ -80,29 +81,29 @@ const Content = () =>
 
 
 function Dashboard(){
-    return <h1>我是首页内容2019年6月5日 14:19:36</h1>
+    return <h3>我是首页内容2019年6月5日 14:19:36</h3>
 }
 
 function Home(){
-    return <h1>我是关于我们页面2019年6月5日 14:20:02</h1>
+    return <h3>我是关于我们页面2019年6月5日 14:20:02</h3>
 }
 
 function Discover({location,history}) {
     console.log('打印to对象里面的信息：',location)
     console.log('查看Link连接是否replace：',history,'查看length')
-    return <h1>我是发现页面的内容2019年6月5日 14:20:23</h1>
+    return <h3>我是发现页面的内容2019年6月5日 14:20:23</h3>
 }
 
 function Message(){
-    return <h1>我是消息信息页面2019年6月5日 14:53:47</h1>
+    return <h3>我是消息信息页面2019年6月5日 14:53:47</h3>
 }
 
 function Phone(){
-    return <h1>我是联系方式页面2019年6月5日 14:54:08</h1>
+    return <h3>我是联系方式页面2019年6月5日 14:54:08</h3>
 }
 
 function Setting(){
-    return <h1>我是用户设置页面2019年6月5日 14:54:31</h1>
+    return <h3>我是用户设置页面2019年6月5日 14:54:31</h3>
 }
 
 export default App

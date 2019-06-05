@@ -34,6 +34,7 @@ class App extends Component {
                      forceRefresh={optionalBool}
                      keyLength={optionalNumber}
                 >
+                     <h1>BrowserRouter 的详细介绍</h1>
                     <Headers />
                     <Content />
                 </BrowserRouter>

@@ -32,6 +32,7 @@ class App extends Component {
                      })}
                      hashType={optionalStr}
                 >
+                    <h1>HashRouter 的详细介绍</h1>
                     <Headers />
                     <Content />
                 </HashRouter>

@@ -43,8 +43,8 @@ React Router 遵循了React的理念: 万物皆组件。因此BrowserRouter、Ha
   - innerRef: RefObject
   - others 
 - NavLink  [NavLink]('./Nav-link.jsx')
-- Switch
-- Redirect
+- Switch [Switch]('./Switch.jsx')
+- Redirect [Redirect]('./Redirect.jsx')
 
 
 
