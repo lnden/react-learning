@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import { BrowserRouter, Link, Route } from 'react-router-dom'
+import { HashRouter, Link, Route } from 'react-router-dom'
 
 
 class App extends Component {
@@ -15,28 +15,26 @@ class App extends Component {
             callback(allowTransition);
         }
 
-        //  3、forceRefresh: bool
-        const optionalBool = true
-
-        //  4、keyLength: number
-        //  {pathname: "/", search: "", hash: "", state: undefined, key: "k9ubky"}
-        const optionalNumber = 6
+        //  3、hashType: string  [slash、noslash、hashbang]  
+        //      slash：http://localhost:3000/#/config/
+        //      noslash：http://localhost:3000/#config/
+        //      hashbang：http://localhost:3000/#!/config
+        const optionalStr = 'slash'
         
         //  5、children: node
 
         return (
             <section>
-                <BrowserRouter 
+                <HashRouter 
                      basename={optionalString}
                      getUserConfirmation={optionalFunc('Are you sure?',()=>{
                          console.log(1111)
                      })}
-                     forceRefresh={optionalBool}
-                     keyLength={optionalNumber}
+                     hashType={optionalStr}
                 >
                     <Headers />
                     <Content />
-                </BrowserRouter>
+                </HashRouter>
                 <p>TEST</p>
             </section>
         )
@@ -59,7 +57,6 @@ const Content = () =>
 
 
 function Home({location}){
-    console.log('查看keyLength：',location)
     return <h3>我是首页内容</h3>
 }
 
