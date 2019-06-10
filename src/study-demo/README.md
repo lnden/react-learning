@@ -1,7 +1,7 @@
 ## React 学习计划
 
 
-### 1、组件的创建的几种方式 [component](./components)
+### 1、组件的创建的几种方式 [component](./component)
 
 ### 2、组件间传值(父传子、子传父) [passByValue](./passByValue)
 
@@ -31,6 +31,6 @@
 
 ### 15、HOOK创建组件的方式 [hook](./hook)
 
-### 16、项目中样式的使用 [style](./style) 
+### 16、项目中样式的使用 [style](./styles) 
 
 ### 17、redux [redux](./redux)
