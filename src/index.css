@@ -3,7 +3,7 @@ a { color: #222; }
 ul, li { list-style: none; padding: 0; margin: 0; }
 input { padding: 10px; border-radius: 5px; outline: none; margin-right: 10px; border: 1px solid #dddddd; }
 button { padding: 10px; border-radius: 5px; border: 1px solid #dddddd;background: transparent; color: #808080; cursor: pointer; }
-p,span{background: transparent; color: #808080; }
+p,span,code{background: transparent; color: #808080; }
 hr{border:1px solid #ddd;  margin:15px 0; }
 button:hover { color: #222; }
 section{padding:20px }
