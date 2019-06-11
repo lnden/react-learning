@@ -37,30 +37,43 @@ class App extends Component {
                 <p>1、web 应用是一个状态机，试图与状态是一一对应的</p>
                 <p>2、所有的状态，保存在一个对象里面</p>
 
-                <h4>Store：</h4>
+                <h4>1、Store</h4>
                 <p>store就是保存数据的地方，你可以把它看成一个容器。整个应用只有一个Store ！</p>
                 <code dangerouslySetInnerHTML={{__html:`import { createStore } from "redux"`}}></code><br/>
                 <code>const store = createStore(fn)</code>
 
-                <h4>State：</h4>
+                <h4>2、State</h4>
                 <p>store对象包含所有数据。如果想得到某个时点的数据，就要对store生成快照。这种时点的数据集合，就叫做State。</p>
                 <p>当前时刻的state，可以通过store.getState()拿到。</p>
                 <code dangerouslySetInnerHTML={{__html:`import { createStore } from "redux"`}}></code><br/>
                 <code>const store = createStore(fn)</code><br/>
                 <code>const state = store.getState()</code>
 
-                <h4>Action：</h4>
+                <h4>3、Action</h4>
                 <p>State 的变化，会导致 View 的变化。但是，用户接触不到 State，只能接触到 View。所以，State 的变化必须是 View 导致的。Action 就是 View 发出的通知，表示 State 应该要发生变化了。</p>                <p></p>
                 <code dangerouslySetInnerHTML={{__html:`const action = {`}}></code><br/>
                 <code>&emsp;&emsp;type: "ADD_COUNT",</code><br/>
                 <code>&nbsp;&nbsp;payload: "learn redux"</code><br/>
                 <code dangerouslySetInnerHTML={{__html: `};`}}></code>
 
-                <h4>store.dispatch()</h4>
+                <h4>4、store.dispatch()</h4>
                 <p>store.dispatch() 是View发出Action的唯一方法</p>
                 <code dangerouslySetInnerHTML={{__html: `import { createStore } from "redux"`}}></code><br/>
                 <code>const store = createStore(fn)</code><br/>
                 <code dangerouslySetInnerHTML={{__html: `store.dispatch(action)`}}></code>
+
+                <h4>5、Reducer</h4>
+                <p>store收到Action以后，必须给出一个新的state，这样View才会发生改变。这种state的计算过程就叫做Reducer。</p>
+                <p>reducer是一个函数，他接受Action和当前state作为参数，返回一个新的state。</p>
+                <code dangerouslySetInnerHTML={{__html: `import { createStore } from "redux"`}}></code><br/>
+                <code>const store = createStore(reducer)</code>
+                <p>上面代码中，createStore接受Reducer作为参数，生成一个新的store。以后每当store.dispatch发送过来一个新的Action，就会自动调用Reducer，得到新的state</p>
+            
+                <h4>6、store.subscribe()</h4>
+                <p>store允许使用store.subscribe方法设置监听函数，一旦state发生变化，就自动执行这个函数</p>
+                <p>显然，只要把View的更新函数(对于React项目，就是组件的render方法或setState方法)放入listen，就会实现View自动渲染。</p>
+           
+                <h4>纯函数 概念</h4>
             </section>
         )
     }
