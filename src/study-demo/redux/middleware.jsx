@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { applyMiddleware,createStore } from 'redux'
-import createLogger from 'redux-logger'
-const logger = createLogger();
+import logger from 'redux-logger'
 
 
 const action = {
@@ -17,6 +16,7 @@ const reducer = (state = defaultStatus,action) => {
             return state
     }
 }
+
 const store = createStore(reducer,applyMiddleware(logger))
 
 class App extends Component {
