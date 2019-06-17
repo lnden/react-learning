@@ -11,7 +11,7 @@ const defaultStatus = 0
 const reducer = (state = defaultStatus,action) => {
     switch (action.type) {
         case 'ADD_COUNT':
-            return state + 1
+            return state + 1  
         default:
             return state
     }
@@ -23,7 +23,7 @@ class App extends Component {
     render() {
         return (
             <section>
-                <h3>我是Redux test</h3>
+                <h1>Redux-logger浅析</h1>
                 <Button/>
                 <Viewsum/>
             </section>
@@ -34,7 +34,6 @@ class App extends Component {
 
 //  按钮
 class Button extends Component {
-
     handleClick = () => {
         console.log(1)
         store.dispatch(action)

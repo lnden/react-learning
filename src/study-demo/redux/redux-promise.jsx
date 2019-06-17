@@ -1,14 +1,16 @@
-
 import React, { Component } from 'react'
-import { createStore   } from 'redux'
+import { createStore } from 'redux'
+
 
 const action = {
     type: 'ADD_COUNT',
     payload: 'add number'
 }
-const defaultStatus = 0;
+
+let defaultStatus = 0;
+
 const reducer = (state = defaultStatus,action) => {
-    switch(action.type) {
+    switch(action.type){
         case 'ADD_COUNT':
             return state + 1
         default:
@@ -17,11 +19,11 @@ const reducer = (state = defaultStatus,action) => {
 }
 const store = createStore(reducer)
 
-class App extends Component {
+class App  extends Component {
     render() {
         return (
             <section>
-                <h1>React-thunk浅析</h1>
+                <h1>Redux-promise浅析</h1>
                 <Button />
                 <Viewbox />
             </section>
@@ -30,34 +32,21 @@ class App extends Component {
 }
 
 class Button extends Component {
-
-    handleClick = (dispatch,getState) => {
-        fetch('http://localhost:1234/api/test/user/users').then(res => {
-            return res.json();
-        })
-        .then(data => {
-            console.log(111)
-            // store.dispatch(action)
-        })
-        .catch(e => {
-            console.log(e)
-            store.dispatch(action)
-        })
-
+    handleClick = () => {
+        store.dispatch(action)
     }
 
     render() {
         return (
             <section>
-                <button onClick={this.handleClick}>测试按钮</button>
+                <button onClick={this.handleClick}>点击自增</button>
             </section>
         )
     }
 }
 
 class Viewbox extends Component {
-
-    constructor(props){
+    constructor(props) {
         super(props)
         this.state = {
             count: store.getState()
@@ -75,9 +64,11 @@ class Viewbox extends Component {
     render() {
         return (
             <section>
-                <p>我应该是纯展示的数值：{this.state.count}</p>
+                <p>视图View展示为：{this.state.count}</p>
             </section>
         )
     }
 }
+
+
 export default App
