@@ -2,15 +2,27 @@ import React, { Component } from 'react'
 import { createStore,applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
 
-const action = {
-    type: 'ADD_COUNT',
-    payload: 'add number'
+
+function POSTBOX(type, payload = 'test redux-thunk') {
+    return {
+        type, 
+        payload
+    }
 }
-const defaultStatus = 0;
+
+const defaultStatus = '详情';
 const reducer = (state = defaultStatus,action) => {
     switch(action.type) {
-        case 'ADD_COUNT':
-            return state + 1
+        case 'FETCH_INIT':
+            return  state + ':初始化、'
+        case 'FETCH_FRIENDS':
+            return state + '：dispatch开始、'
+        case 'RECEIVE_FRIENDS':
+            return state + '：dispatch成功、'
+        case 'RECEIVE_LAST_SECOND':
+            return state + '：dispatch倒数第二次'
+        case 'RECEIVE_FAILURE':
+            return state + '：dispatch失败'
         default:
             return state
     }
@@ -29,21 +41,50 @@ class App extends Component {
     }
 }
 
+
+function fetchFriends() {
+    return dispatch => {
+        console.log('第零次初始化：')
+        dispatch(
+            POSTBOX( 'FETCH_INIT','init')
+        )
+        const url = "https://hn.algolia.com/api/v1/search?query=react&page=0&hitsPerPage=50";
+        return fetch(url)
+                .then(response => {
+                    console.log('第一次请求request：',response)
+                    return response.json()
+                })
+                .then(json => {
+                    console.log('第二次处理.json()：',json)
+                    return dispatch(
+                        POSTBOX('RECEIVE_FRIENDS',json)
+                    )
+                })
+                .then(data=>{
+                    console.log('第三次截取错误：',data)
+                    return dispatch(
+                        POSTBOX('RECEIVE_LAST_SECOND','last-seconed')
+                    )
+                })
+                .then(data=>{
+                    console.log('第四次请求、五次ing：',data)
+                })
+                .catch(err => {
+                    console.log(err)
+                    return dispatch(
+                        POSTBOX('RECEIVE_FAILURE','failure')
+                    )
+                })
+    }
+}
+
 class Button extends Component {
-
-    handleClick = (dispatch,getState) => {
-        fetch('http://localhost:1234/api/test/user/users').then(res => {
-            return res.json();
+    handleClick = () => {
+        store.dispatch(fetchFriends()).then(res=>{
+            console.log(11)  
+        }).then(res=>{
+            console.log(22)
         })
-        .then(data => {
-            console.log(111)
-            // store.dispatch(action)
-        })
-        .catch(e => {
-            console.log(e)
-            store.dispatch(action)
-        })
-
     }
 
     render() {

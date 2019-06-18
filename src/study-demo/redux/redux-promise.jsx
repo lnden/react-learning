@@ -3,7 +3,7 @@ import { createStore, applyMiddleware } from 'redux'
 import promiseMiddleware from 'redux-promise'
 
 
-function POST(type,payload = 'add number'){
+function POST(type,payload = 'test redux-promise'){
     return {
         type, 
         payload
@@ -62,10 +62,10 @@ const FetchPosts = (dispatch,url) => new Promise((resolve,reject)=>{
             })
             .then(data=>{
                 console.log('第四次请求、五次ing：',data)
+                resolve(data)
             })
             .catch((err)=>{
                 console.log('报错信息：',err)
-
             })
 })
 
@@ -73,7 +73,11 @@ class Button extends Component {
     handleClick = () => {
         const { dispatch } = store
         const url = "https://hn.algolia.com/api/v1/search?query=react&page=0&hitsPerPage=50";
-        store.dispatch(FetchPosts(dispatch,url))
+        store.dispatch(FetchPosts(dispatch,url)).then(res=>{
+            console.log(res,store.getState())
+        }).then(res=>{
+            console.log(22)
+        })
     }
 
     render() {
