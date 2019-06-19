@@ -5,7 +5,7 @@ import * as serviceWorker from './serviceWorker';
 // //引入react-redux集成
 import { Provider } from 'react-redux'
 /** 合并redux*/
-import store from './store/merge.js'
+import store from './store/index.js'
 
 /**
  *  React之道 TODO-LIST
@@ -45,9 +45,9 @@ import store from './store/merge.js'
 // React 哲学
 // import App from './study-demo/product/'
 // React Tic-Tac-Toe
-// import App from './study-demo/tic-tac-toe/'
+import App from './study-demo/tic-tac-toe/'
 
-import App from './study-demo/redux/redux-promise.jsx'
+// import App from './study-demo/redux/redux-promise.jsx'
 
 const PRODUCTS = [
     {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},

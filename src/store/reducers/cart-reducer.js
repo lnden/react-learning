@@ -34,12 +34,21 @@ export default function(state=initialState,action){
         case UPDATE_CART:{
             return {
                 ...state,
-                cart: state.cart.map(item => item.product === action.payload.product ? action.payload:item)
+                // 判断当前产品===传递过来的产品  返回新的商品和数量、否则返回原来对象
+                cart: state.cart.map(item => {
+                    console.log(item.product,1111)
+                    if(item.product === action.payload.product){
+                        return action.payload
+                    }else{
+                        return item
+                    }
+                })
             }
         }
         case DELETE_FROM_CART:{
             return {
                 ...state,
+                // 判断产品名称是否相同，如果相同则删除对应产品
                 cart: state.cart.filter(item => item.product !== action.payload.product)
             }
         }
