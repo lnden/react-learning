@@ -18,7 +18,8 @@
 
 ### applyMiddleware()
 
-***
+
+
 
 ## middleware
 
@@ -28,7 +29,8 @@
 
 ### redux-saga
 
-***
+
+
 
 ## React-redux
 
@@ -51,3 +53,9 @@
 
 
 > ./study-demo/redux 目录
+
+- index.jsx
+- react-redux.jsx
+- redux-logger.jsx
+- redux-promise.jsx
+- redux-thunk.jsx
