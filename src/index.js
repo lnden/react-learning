@@ -37,17 +37,15 @@ import store from './store/index.js'
  *  import App from './example/context-middle'
  *  import App from './example/context-complex'
  *
- *  redux 计算器(引用该组件需要注释本页面的其它store)
- *  import App from './example/redux/redux'
  */
 
 //react学习计划 https://github.com/pacterafe/team-react/blob/master/README.zh-CN.md
 // React 哲学
 // import App from './study-demo/product/'
 // React Tic-Tac-Toe
-import App from './study-demo/tic-tac-toe/'
+// import App from './study-demo/tic-tac-toe/'
 
-// import App from './study-demo/redux/redux-promise.jsx'
+import App from './example/redux/redux/index.js'
 
 const PRODUCTS = [
     {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},
@@ -59,25 +57,6 @@ const PRODUCTS = [
 ];
 
 // 结束
-
-/** 拆分redux
- *
-    import store from './store'
-    import { addToCart,updateCart,deleteFromCart } from "./store/actions/cart-actions";
-    // console.log('initial state：',store.getState());
-
-    let unsubscribe = store.subscribe(()=>{
-    // console.log(store.getState())
-    });
-    store.dispatch(addToCart('Coffee 500gm',1,250));
-    store.dispatch(addToCart('Flour 1kg',2,110));
-    store.dispatch(addToCart('Juice 2L',1,250));
-
-    store.dispatch(updateCart('Flour 1kg',5,110));
-    store.dispatch(deleteFromCart('Coffee 500gm'));
-    unsubscribe();
- *
- */
 
 
 ReactDOM.render(
