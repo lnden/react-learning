@@ -5,7 +5,7 @@ import * as serviceWorker from './serviceWorker';
 // //引入react-redux集成
 import { Provider } from 'react-redux'
 /** 合并redux*/
-import store from './store/index.js'
+import store from './example/redux/index.js'
 
 /**
  *  React之道 TODO-LIST

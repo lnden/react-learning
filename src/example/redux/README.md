@@ -2,7 +2,7 @@
 
 
 
-## Redux
+## Redux浅析
 
 ### store[createStore]
 
@@ -21,7 +21,7 @@
 
 
 
-## middleware
+## middleware介绍
 
 ### redux-thunk
 
@@ -32,7 +32,7 @@
 
 
 
-## React-redux
+## React-redux使用
 
 ### Provider
 
@@ -47,16 +47,16 @@
 
 > 当前目录分为三个 redux 案例
 
-- index.html    
-- merge.js
-- index.js
-- redux
+- index.html    // redux 实现原理
+- merge.js      // 合并 reducer
+- index.js      // 拆分 action
+- redux         // redux 加减应用
 
 
 > ./study-demo/redux 目录
 
-- index.jsx
-- react-redux.jsx
-- redux-logger.jsx
-- redux-promise.jsx
-- redux-thunk.jsx
+- index.jsx             // redux 应用，分模块介绍
+- react-redux.jsx       // react-redux 应用
+- redux-logger.jsx      // react-logger 中间件应用
+- redux-promise.jsx     // react-promise 中间件应用
+- redux-thunk.jsx       // react-thunk 中间件应用
