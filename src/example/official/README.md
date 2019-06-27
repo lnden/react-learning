@@ -20,7 +20,6 @@
 
 &emsp;&emsp;列表渲染 & Key值添加。 --核心概念-8.列表&key
 
-
 ## from.js
 
 &emsp;&emsp;表单处理input、select、textarea、radio、checkbox  --核心概念-9.表单
