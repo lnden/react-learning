@@ -1,75 +1,29 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import * as serviceWorker from './serviceWorker';
-// //引入react-redux集成
+import React from 'react'
+import ReactDOM from 'react-dom'
+import Route from './router/'
+import FastClick from 'fastclick';
+import { AppContainer } from 'react-hot-loader';
 import { Provider } from 'react-redux'
-/** 合并redux*/
-import store from './example/redux/index.js'
+import store from './store/'
 
-/**
- *  React之道 TODO-LIST
- *  import App from './example/App';
- *  import App from './example/components/App';
- *
- *  添加备忘录
- *  import App from './example/todolist'
- *
- *  模拟request
- *  import App from './example/todolist/Api'
- *
- *  官方基础知识
- *  import App from './example/official/..'
- *
- *  React路由4.0
- *  import App from './example/router'
- *  import {BrowserRouter,HashRouter} from 'react-router-dom'
- *  <BrowserRouter>
- *      <App />
- *  </BrowserRouter>
- *
- *  生命周期
- *  import App from './example/lifecycle'
- *
- *  组件深层次通信 this.context
- *  import App from './example/context'
- *  import App from './example/context-simple'
- *  import App from './example/context-middle'
- *  import App from './example/context-complex'
- *
- */
-
-//react学习计划 https://github.com/pacterafe/team-react/blob/master/README.zh-CN.md
-// React 哲学
-// import App from './study-demo/product/'
-// React Tic-Tac-Toe
-// import App from './study-demo/tic-tac-toe/'
-
-import App from './example/redux/redux/index.js'
-
-const PRODUCTS = [
-    {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},
-    {category: 'Sporting Goods', price: '$9.99', stocked: true, name: 'Baseball'},
-    {category: 'Sporting Goods', price: '$29.99', stocked: false, name: 'Basketball'},
-    {category: 'Electronics', price: '$99.99', stocked: true, name: 'iPod Touch'},
-    {category: 'Electronics', price: '$399.99', stocked: false, name: 'iPhone 5'},
-    {category: 'Electronics', price: '$199.99', stocked: true, name: 'Nexus 7'}
-];
-
-// 结束
+FastClick.attach(document.body);
 
 
-ReactDOM.render(
-    <Provider store={store}>
-        <App products={PRODUCTS}/>
-    </Provider>,
-    document.getElementById('root')
-);
+const render = Component => {
+    ReactDOM.render(
+        <Provider store={store}>
+            <AppContainer>
+                <Component />
+            </AppContainer>
+        </Provider>,
+        document.getElementById('root'),
+    )
+}
+render(Route)
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
-
-if (module.hot) { module.hot.accept(); }
-
+// Webpack Hot Module Replacement API
+if (module.hot) {
+  module.hot.accept('./router/', () => {
+    render(Route);
+  })
+}
