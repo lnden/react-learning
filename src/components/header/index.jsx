@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
-import './header.scss'
+import './demo.css'
+// import './lnden.scss'
+import './index.less'
 
 export default class PublicHeader extends Component {
     render(){
         return (
-            <section>
-                公共头部信息 
-            </section>
+            <header className="header-container">
+                <span className="header-slide-icon icon-catalog" onClick={this.toggleNav}>11</span>
+            </header>
         )
     }
 }
