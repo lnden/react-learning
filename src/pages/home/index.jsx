@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PublicHeader from '../../components/header/index.jsx';
-import './index.less'
+// import './index.less'
 
 class Home extends Component {
     render() {
