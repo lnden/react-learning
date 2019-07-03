@@ -98,8 +98,8 @@ class Home extends Component {
                     </div>
                     <img className="select-img" alt=""/>
                 </div>
-                <TouchableOpacity className="submit-btn" clickCallBack={this.sumitForm} text="提交" />
-                <PublicAlert closeAlert={this.closeAlert} alertTip={this.state.alertTip} alertStatus={this.state.alertStatus} />
+                {/* <TouchableOpacity className="submit-btn" clickCallBack={this.sumitForm} text="提交" /> */}
+                {/* <PublicAlert closeAlert={this.closeAlert} alertTip={this.state.alertTip} alertStatus={this.state.alertStatus} /> */}
             </main>
         )
     }
