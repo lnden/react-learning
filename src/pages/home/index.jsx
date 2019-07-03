@@ -1,12 +1,27 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom'
 import API from '@/api/api';
 import PublicHeader from '@/components/header/index.jsx';
-// import './index.less'
+import TouchableOpacity from '@/components/TouchableOpacity/index.jsx'
+import PublicAlert from '@/components/alert/index.jsx'
+import './index.less'
 // import mixin, { padStr } from '../../utils/mixin';
 
 // @mixin({padStr})
 class Home extends Component {
+    static propTypes = {
+        formData: PropTypes.object.isRequired,
+        saveFormData: PropTypes.func.isRequired,
+        saveImg: PropTypes.func.isRequired,
+        clearData: PropTypes.func.isRequired,
+        clearSelected: PropTypes.func.isRequired
+    }
+
+    state = {
+        alertStatus: false, //弹框状态
+        alertTip: '', //弹框提示文字
+    }
 
     selectedProList = []; 
 
@@ -55,7 +70,7 @@ class Home extends Component {
         return (
             <main className="home-container">
                 <PublicHeader title='首页' record />
-                <p className="common-title">请录入您222的信息</p>
+                <p className="common-title">请录入您的信息</p>
                 
                 <form className="home-form">
                     <div className="home-form-tiem">
@@ -98,8 +113,8 @@ class Home extends Component {
                     </div>
                     <img className="select-img" alt=""/>
                 </div>
-                {/* <TouchableOpacity className="submit-btn" clickCallBack={this.sumitForm} text="提交" /> */}
-                {/* <PublicAlert closeAlert={this.closeAlert} alertTip={this.state.alertTip} alertStatus={this.state.alertStatus} /> */}
+                <TouchableOpacity className="submit-btn" clickCallBack={this.sumitForm} text="提交" />
+                <PublicAlert closeAlert={this.closeAlert} alertTip={this.state.alertTip} alertStatus={this.state.alertStatus} />
             </main>
         )
     }
