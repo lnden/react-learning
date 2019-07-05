@@ -16,7 +16,7 @@ src/example/..  该目录下是一些react构建的简单demo，包含TODO List�
 ```
 cnpm install babel-plugin-transform-decorators-legacy -D
 ```
-** Babel >= 7.x ** 
+**Babel >= 7.x** 
 
 ```
 {
