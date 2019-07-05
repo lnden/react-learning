@@ -9,10 +9,10 @@ import PublicHeader from '@/components/header/index.jsx';
 import TouchableOpacity from '@/components/TouchableOpacity/index.jsx'
 import PublicAlert from '@/components/alert/index.jsx'
 import './index.less'
-// import mixin, { padStr } from '@/utils/mixin';
+import mixin, { padStr } from '@/utils/mixin';
 import config from '@/config.js';
 
-// @mixin({padStr})
+@mixin({padStr})
 class Home extends Component {
     static propTypes = {
         formData: PropTypes.object.isRequired,
@@ -31,7 +31,7 @@ class Home extends Component {
      *  已选择的商品数据
      *  @type {Array}
      */
-    selectedProList = []; 
+    selectedProList = 
 
 /**
    * 将表单数据保存至redux，保留状态
