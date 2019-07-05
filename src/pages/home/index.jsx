@@ -2,15 +2,28 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom'
-import API from '@/api/api';
-import { saveFormData, saveImg, clearData } from '@/store/home/action';
-import { clearSelected } from '@/store/production/action';
+
+//  配置文件
+import config from '@/config.js';
+
+//  方法集引入
+import mixin, { padStr } from '@/utils/mixin';
+
+//  公用组件部分
 import PublicHeader from '@/components/header/index.jsx';
 import TouchableOpacity from '@/components/TouchableOpacity/index.jsx'
 import PublicAlert from '@/components/alert/index.jsx'
+
+//  redux actions
+import { saveFormData, saveImg, clearData } from '@/store/home/action';
+import { clearSelected } from '@/store/production/action';
+
+//  请求引入
+import API from '@/api/api';
+
+// 样式引入
 import './index.less'
-import mixin, { padStr } from '@/utils/mixin';
-import config from '@/config.js';
+
 
 @mixin({padStr})
 class Home extends Component {
@@ -31,13 +44,13 @@ class Home extends Component {
      *  已选择的商品数据
      *  @type {Array}
      */
-    selectedProList = 
+    selectedProList = []
 
-/**
-   * 将表单数据保存至redux，保留状态
-   * @param  {string} type  数据类型 orderSum||name||phoneNo
-   * @param  {object} event 事件对象
-   */
+    /**
+     * 将表单数据保存至redux，保留状态
+     * @param  {string} type  数据类型 orderSum||name||phoneNo
+     * @param  {object} event 事件对象
+     */
     handleInput = (type, event) => {
         let value = event.target.value;
         switch(type){
@@ -46,12 +59,17 @@ class Home extends Component {
             case 'name':
                 break;
             case 'phoneNo':
-                value = this.padStr(value.replace(/\D/g, ''), [3, 7], ' ', event.target);break;
+            console.log(value,111)
+                value = this.padStr(value.replace(/\D/g, ''), [3, 7], ' ', event.target);
+                console.log(value);break;
             default:;
         }
         this.props.saveFormData(value, type);
     }
 
+    /*
+        上传图片，并将图片地址存到redux，保留状态
+    */
     uploadImg = async event => {
         try{
             let formdata = new FormData();
@@ -83,7 +101,6 @@ class Home extends Component {
             alertTip,
         })
     }
-
      
     // 关闭弹款
     closeAlert = () => {
@@ -97,20 +114,20 @@ class Home extends Component {
         return (
             <main className="home-container">
                 <PublicHeader title='首页' record />
-                <p className="common-title">请录入您的信息</p>
                 
+                <p className="common-title">请录入您的信息</p>
                 <form className="home-form">
                     <div className="home-form-tiem">
                         <span>销售金额：</span>
-                        <input type="text" placeholder="请输入订单金额" onChange={this.handleInput.bind(this,'orderSum')}/>
+                        <input type="text" placeholder="请输入订单金额" value={this.props.formData.orderSum} onChange={this.handleInput.bind(this,'orderSum')}/>
                     </div>
                     <div className="home-form-tiem">
                         <span>客户姓名：</span>
-                        <input type="text" placeholder="请输入客户姓名" onChange={this.handleInput.bind(this,'name')} />
+                        <input type="text" placeholder="请输入客户姓名" value={this.props.formData.name} onChange={this.handleInput.bind(this,'name')} />
                     </div>
                     <div className="home-form-tiem">
                         <span>客户电话：</span>
-                        <input type="text" maxLength="13" placeholder="请输入客户电话" onChange={this.handleInput.bind(this,'phoneNo')}/>
+                        <input type="text" maxLength="13" placeholder="请输入客户电话" value={this.props.formData.phoneNo} onChange={this.handleInput.bind(this,'phoneNo')}/>
                     </div>
                 </form>
 

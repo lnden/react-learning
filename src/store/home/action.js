@@ -17,7 +17,7 @@ export const saveImg = path => {
   }
 }
 
-// 保存图片地址
+// 清空数据
 export const clearData = () => {
   return {
     type: home.CLEARDATA,
