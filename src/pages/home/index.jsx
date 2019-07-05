@@ -1,12 +1,16 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom'
 import API from '@/api/api';
+import { saveFormData, saveImg, clearData } from '@/store/home/action';
+import { clearSelected } from '@/store/production/action';
 import PublicHeader from '@/components/header/index.jsx';
 import TouchableOpacity from '@/components/TouchableOpacity/index.jsx'
 import PublicAlert from '@/components/alert/index.jsx'
 import './index.less'
-// import mixin, { padStr } from '../../utils/mixin';
+// import mixin, { padStr } from '@/utils/mixin';
+import config from '@/config.js';
 
 // @mixin({padStr})
 class Home extends Component {
@@ -23,14 +27,37 @@ class Home extends Component {
         alertTip: '', //弹框提示文字
     }
 
+    /**
+     *  已选择的商品数据
+     *  @type {Array}
+     */
     selectedProList = []; 
+
+/**
+   * 将表单数据保存至redux，保留状态
+   * @param  {string} type  数据类型 orderSum||name||phoneNo
+   * @param  {object} event 事件对象
+   */
+    handleInput = (type, event) => {
+        let value = event.target.value;
+        switch(type){
+            case 'orderSum':
+                value = value.replace(/\D/g, '');break;
+            case 'name':
+                break;
+            case 'phoneNo':
+                value = this.padStr(value.replace(/\D/g, ''), [3, 7], ' ', event.target);break;
+            default:;
+        }
+        this.props.saveFormData(value, type);
+    }
 
     uploadImg = async event => {
         try{
             let formdata = new FormData();
             formdata.append('file',event.target.files[0]);
             let result = await API.uploadImg({data: formdata})
-            console.log(result)
+            this.props.saveImg(config.imgUrl + result.image_path);
         }catch(err){
             console.log(err)
         }
@@ -75,15 +102,15 @@ class Home extends Component {
                 <form className="home-form">
                     <div className="home-form-tiem">
                         <span>销售金额：</span>
-                        <input type="text" placeholder="请输入订单金额" />
+                        <input type="text" placeholder="请输入订单金额" onChange={this.handleInput.bind(this,'orderSum')}/>
                     </div>
                     <div className="home-form-tiem">
                         <span>客户姓名：</span>
-                        <input type="text" placeholder="请输入客户姓名" />
+                        <input type="text" placeholder="请输入客户姓名" onChange={this.handleInput.bind(this,'name')} />
                     </div>
                     <div className="home-form-tiem">
                         <span>客户电话：</span>
-                        <input type="text" maxLength="13" placeholder="请输入客户电话" />
+                        <input type="text" maxLength="13" placeholder="请输入客户电话" onChange={this.handleInput.bind(this,'phoneNo')}/>
                     </div>
                 </form>
 
@@ -111,7 +138,7 @@ class Home extends Component {
                         <span className="common-select-btn">上传图片</span>
                         <input type="file" onChange={this.uploadImg} />
                     </div>
-                    <img className="select-img" alt=""/>
+                    <img src={this.props.formData.imgpath} className="select-img" alt=""/>
                 </div>
                 <TouchableOpacity className="submit-btn" clickCallBack={this.sumitForm} text="提交" />
                 <PublicAlert closeAlert={this.closeAlert} alertTip={this.state.alertTip} alertStatus={this.state.alertStatus} />
@@ -120,4 +147,13 @@ class Home extends Component {
     }
 }
 
-export default Home
+
+export default connect(state => ({
+    formData: state.formData,
+    proData: state.proData,
+  }), {
+    saveFormData, 
+    saveImg,
+    clearData,
+    clearSelected,
+  })(Home);
