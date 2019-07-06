@@ -33,3 +33,19 @@ cnpm install babel-plugin-transform-decorators-legacy -D
 在 package.json 添加 "homepage": "./" 打包完成之后点开 public/index.html 文件即可查看页面
 
 如果要放在 github page 页面 需要修改为 "homepage": "/react-init/"
+
+
+### 添加 postcss-pxtorem 转换rem
+
+```
+cnpm install postcss-pxtorem -D
+```
+ 修改 config/webpack.config.js 
+
+ ```
+require('postcss-pxtorem')({
+    rootValue : 75,
+    selectorBlackList  : [], //过滤
+    propList   : ['*'],
+})
+ ```
