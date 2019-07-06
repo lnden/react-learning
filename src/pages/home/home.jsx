@@ -22,7 +22,7 @@ import { clearSelected } from '@/store/production/action';
 import API from '@/api/api';
 
 // 样式引入
-import './index.less'
+import './home.less'
 
 
 @mixin({padStr})

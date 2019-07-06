@@ -26,3 +26,10 @@ cnpm install babel-plugin-transform-decorators-legacy -D
 }
 ```
 低版本查看[babel-plugin-transform-decorators-legacy](https://www.npmjs.com/package/babel-plugin-transform-decorators-legacy)
+
+
+### npm run build 打包构建
+
+在 package.json 添加 "homepage": "./" 打包完成之后点开 public/index.html 文件即可查看页面
+
+如果要放在 github page 页面 需要修改为 "homepage": "/react-init/"
