@@ -88,18 +88,19 @@ class BrokeRage extends Component {
     }
 
     render() {
+        const { applyNum,balance, alertTip, alertStatus } = this.state
         return (
             <main className="home-container">
                 <PublicHeader title="帮助中心" record />
                 <section className="broke-main-content">
-                    <p className="broke-header">您的可体现金额为：￥{this.state.balance.balance}</p>
+                    <p className="broke-header">您的可体现金额为：￥{balance.balance}</p>
                     <form className="broke-form">
                         <p>请输入体现金额(元)</p>
-                        <p>￥<input type="text" value={this.state.applyNum} placeholder="0.00" maxLength="5" onChange={this.handleInput} /></p>
+                        <p>￥<input type="text" value={applyNum} placeholder="0.00" maxLength="5" onChange={this.handleInput} /></p>
                     </form>
                     <TouchableOpacity className="submit-btn" clickCallBack={this.sumitForm} text="申请提现"/>
                 </section>
-                <PublicAlert closeAlert={this.closeAlert} alertTip={this.state.alertTip} alertStatus={this.state.alertStatus} />
+                <PublicAlert closeAlert={this.closeAlert} alertTip={alertTip} alertStatus={alertStatus} />
             </main>
         )
     }
