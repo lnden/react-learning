@@ -59,9 +59,7 @@ class Home extends Component {
             case 'name':
                 break;
             case 'phoneNo':
-            console.log(value,111)
-                value = this.padStr(value.replace(/\D/g, ''), [3, 7], ' ', event.target);
-                console.log(value);break;
+                value = this.padStr(value.replace(/\D/g, ''), [3, 7], ' ', event.target);break;
             default:;
         }
         this.props.saveFormData(value, type);
@@ -81,7 +79,7 @@ class Home extends Component {
         }
     }
     
-    // 提交表单
+    // 提交表单 || 使用公共的按钮组件
     sumitForm = () => {
         const {orderSum, name, phoneNo} = this.props.formData;
         let alertTip = '';
@@ -165,12 +163,39 @@ class Home extends Component {
 }
 
 
+
+const mapStateToProps = (state) => {
+    return {
+        formData: state.formData,
+        proData: state.proData
+    }
+}
+
+const mapDispatchToProps = (dispatch,ownProps) => {
+    return {
+        saveFormData: (value,type)=> dispatch(saveFormData(value,type)),
+        saveImg:(value)=> dispatch(saveImg(value)),
+        clearData:()=> dispatch(clearData()),
+        clearSelected:()=> dispatch(clearSelected()),
+    }
+}
+
+/**
+ *  react-redux connect方法
+ *      1.输入逻辑：外部的数据(即state对象)如何转换为 UI 组件的参数
+ *      2.输出逻辑：用户发出的动作如何变为 Action 对象，从 UI 组件传出来
+ * 
+ *      connect(
+ *          mapStateToPropsp,
+ *          mapDispatchToProps
+ *      )(Home)
+ */
 export default connect(state => ({
-    formData: state.formData,
-    proData: state.proData,
-  }), {
-    saveFormData, 
-    saveImg,
-    clearData,
-    clearSelected,
-  })(Home);
+        formData: state.formData,
+        proData: state.proData,
+    }), {
+        saveFormData, 
+        saveImg,
+        clearData,
+        clearSelected,
+    })(Home);

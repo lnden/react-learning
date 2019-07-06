@@ -2,15 +2,15 @@
 
 This project is more suitable for beginners
 
-该项目使用  create-react-app my-app 创建
+也许你现在也和我当初一样迷茫，会一些react的语法，想实战一个项目，不知从何而起。UI框架琳琅满目，我认为学习一门技术，一定要从底层学起，这样以后入手一些UI框架以及封装好的Rudex方案Dva等会更加深入理解，而不是盲目的去会使用！
 
-src/example/..  该目录下是一些react构建的简单demo，包含TODO List、官方demo、以及 router的使用，router使用的是4.0版本 react-router-dom
+该库已经非常详细的结合 官方实例、React学习之道、react社区、开源项目 等给出相应的示例展示并且详细备注
 
-也许你现在也和我当初一样迷茫，会一些react的语法，想实战一个项目，不知从何而起。UI框架琳琅满目，我认为学习一门技术，一定要从底层学起，这样以后入手一些UI框架以及封装好的Rudex方案Dva等会更加深入理解，而不是盲目的去会使用~！
+- study-demo 为官方实例集合 + React学习之道 详情查看./study-demo/README.md
+- src下外层目录为 开源项目的实践 react + react-redux + less + animate + axios + redux-middleware + styled-component + css.module + react-router-dom
 
 
 2019-07-05
-
 ### create-react-app添加修饰符
 
 ```
