@@ -107,6 +107,20 @@ class Home extends Component {
             alertTip: '',
         })
     }
+ // 初始化数据，获取已选择的商品
+    initData = props => {
+        this.selectedProList = [];
+        props.proData.dataList.forEach(item => {
+            if(item.selectStatus && item.selectNum){
+                this.selectedProList.push(item);
+            }
+        })
+    }
+
+
+  componentWillMount(){
+        this.initData(this.props);
+    }
 
     render() {
         return (

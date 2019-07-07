@@ -13,6 +13,11 @@ class Production extends Component {
         editPro: PropTypes.func.isRequired
     }
 
+    /**
+     *  添加或删减商品，交由redux进行数据处理，作为全局变量
+     *  @param  {int} index 编辑的商品索引
+     *  @param  {int} num   添加||删减的商品数量
+     */
     handleEdit = (index, num) => {
         let currentNum = this.props.proData.dataList[index].selectNum + num;
         if(currentNum < 0){
@@ -20,10 +25,13 @@ class Production extends Component {
         }
         this.props.editPro(index, currentNum)
     }
+
+     // 选择商品，交由redux进行数据处理，作为全局变量
     togSelect = (index) => {
         this.props.togSelectPro(index)
     }
 
+    //  初始化请求产品列表
     componentDidMount(){
         if(!this.props.proData.dataList.length){
             this.props.getProData();
@@ -32,8 +40,8 @@ class Production extends Component {
 
     render() {
         return (
-            <main className="comm-con-top">
-                <PublicHeader title="产品列表" record />
+            <main className="common-con-top">
+                <PublicHeader title="产品列表" confirm />
                 <section className="pro-list-con">
                     <ul className="pro-list-ul">
                         {
