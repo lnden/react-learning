@@ -146,7 +146,14 @@
     "presets": [
       "react-app"
     ],
-    "plugins": [ ["@babel/plugin-proposal-decorators", { "legacy": true }]]
+    "plugins": [
+      [
+        "@babel/plugin-proposal-decorators",
+        {
+          "legacy": true
+        }
+      ]
+    ]
   },
   "devDependencies": {
     "postcss-pxtorem": "^4.0.1"
