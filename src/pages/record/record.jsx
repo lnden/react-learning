@@ -23,9 +23,17 @@ class Record extends Component {
         }
         this.setState({flagBarPos})
     }
-
+    componentWillReceiveProps(nextProps){
+        // 属性变化时设置头部底部标签位置
+        let currenType = this.props.location.pathname.split('/')[2];
+        let type = nextProps.location.pathname.split('/')[2];
+        if(currenType !== type){
+            this.setFlagBarPos(type);
+        }
+    }
     componentWillMount(){
         let type = this.props.location.pathname.split('/')[2];
+        console.log(type)
         this.setFlagBarPos(type)
     }
 
