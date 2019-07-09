@@ -33,7 +33,6 @@ class Record extends Component {
     }
     componentWillMount(){
         let type = this.props.location.pathname.split('/')[2];
-        console.log(type)
         this.setFlagBarPos(type)
     }
 

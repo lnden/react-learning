@@ -49,3 +49,26 @@ require('postcss-pxtorem')({
     propList   : ['*'],
 })
  ```
+
+
+### 依赖按钮
+```
+"antd": "^3.19.3",
+"classnames": "^2.2.6",
+"create-react-class": "^15.6.3",
+"fastclick": "^1.0.6",
+"node-sass": "^4.12.0",
+"prop-types": "^15.7.2",
+"react": "^16.8.6",
+"react-dom": "^16.8.6",
+"react-hot-loader": "^4.11.1",
+"react-redux": "^7.0.3",
+"react-router-dom": "^5.0.0",
+"react-scripts": "3.0.0",
+"redux": "^4.0.1",
+"redux-devtools-extension": "^2.13.8",
+"redux-logger": "^3.0.6",
+"redux-promise": "^0.6.0",
+"redux-thunk": "^2.3.0",
+"styled-components": "^4.2.0"
+```
