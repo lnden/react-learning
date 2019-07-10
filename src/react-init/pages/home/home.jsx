@@ -4,22 +4,22 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom'
 
 //  配置文件
-import config from '@/config.js';
+import config from '@/react-init/config.js';
 
 //  方法集引入
-import mixin, { padStr } from '@/utils/mixin';
+import mixin, { padStr } from '@/react-init/utils/mixin';
 
 //  公用组件部分
-import PublicHeader from '@/components/header/index.jsx';
-import TouchableOpacity from '@/components/TouchableOpacity/index.jsx'
-import PublicAlert from '@/components/alert/index.jsx'
+import PublicHeader from '@/react-init/components/header/index.jsx';
+import TouchableOpacity from '@/react-init/components/TouchableOpacity/index.jsx'
+import PublicAlert from '@/react-init/components/alert/index.jsx'
 
 //  redux actions
-import { saveFormData, saveImg, clearData } from '@/store/home/action';
-import { clearSelected } from '@/store/production/action';
+import { saveFormData, saveImg, clearData } from '@/react-init/store/home/action';
+import { clearSelected } from '@/react-init/store/production/action';
 
 //  请求引入
-import API from '@/api/api';
+import API from '@/react-init/api/api';
 
 // 样式引入
 import './home.less'

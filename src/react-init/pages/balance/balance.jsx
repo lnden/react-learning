@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import PublicHeader from '@/components/header/index.jsx'
-import TouchableOpacity from '@/components/TouchableOpacity/index.jsx'
-import PublicAlert from '@/components/alert/index.jsx'
-import API from '@/api/api'
+import PublicHeader from '@/react-init/components/header/index.jsx'
+import TouchableOpacity from '@/react-init/components/TouchableOpacity/index.jsx'
+import PublicAlert from '@/react-init/components/alert/index.jsx'
+import API from '@/react-init/api/api'
 import './balance.less'
 
 class BrokeRage extends Component {

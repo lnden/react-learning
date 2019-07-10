@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import API from '@/api/api.js'
+import API from '@/react-init/api/api.js'
 import './recordList.less'
 
 class RecordList extends Component {

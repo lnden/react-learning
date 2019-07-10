@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import PublicHeader from '@/components/header/index.jsx'
-import { getProData, togSelectPro, editPro } from '@/store/production/action'
+import PublicHeader from '@/react-init/components/header/index.jsx'
+import { getProData, togSelectPro, editPro } from '@/react-init/store/production/action'
 import './production.less'
 
 class Production extends Component {

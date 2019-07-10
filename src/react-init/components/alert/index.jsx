@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types' 
-import TouchableOpacity from '@/components/TouchableOpacity/index.jsx'
+import TouchableOpacity from '@/react-init/components/TouchableOpacity/index.jsx'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import './index.less'
 

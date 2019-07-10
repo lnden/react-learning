@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { NavLink, Switch, Route, Redirect } from 'react-router-dom'
-import PublicHeader from '@/components/header/index.jsx'
+import PublicHeader from '@/react-init/components/header/index.jsx'
 import RecordList from './components/recordList.jsx'
 import './record.less' 
 

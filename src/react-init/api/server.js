@@ -1,5 +1,5 @@
 import axios from 'axios';
-import envconfig from '@/config.js';
+import envconfig from '@/react-init/config.js';
 /**
  * 主要params参数
  * @params method {string} 方法名
