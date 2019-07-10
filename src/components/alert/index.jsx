@@ -4,6 +4,15 @@ import TouchableOpacity from '@/components/TouchableOpacity/index.jsx'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import './index.less'
 
+/**
+ * @desc 公共弹框组件
+ * @param 
+ *      closeAlert   弹框关闭函数 func
+ *      alertTip    弹框提示字段 string
+ *      alertStatus 弹框是否展示字段 bool
+ * 
+ * @example <PublicAlert closeAlert={this.closeAlert} alertTip={this.state.alertTip} alertStatus={this.state.alertStatus} />
+ */
 export default class Alert extends Component {
     static propTypes = {
         closeAlert: PropTypes.func.isRequired,
