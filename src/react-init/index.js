@@ -25,7 +25,7 @@ render(Route)
 
 // Webpack Hot Module Replacement API
 if (module.hot) {
-  module.hot.accept('./router/', () => {
-    render(Route);
-  })
+    module.hot.accept('./router/', () => {
+        render(Route);
+    })
 }

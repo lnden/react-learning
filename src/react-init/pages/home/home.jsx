@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom'
 
 //  配置文件
-import config from '@/react-init/config.js';
+import config from '@/react-init/utils/config.js';
 
 //  方法集引入
 import mixin, { padStr } from '@/react-init/utils/mixin';
