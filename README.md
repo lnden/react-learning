@@ -2,12 +2,15 @@
 
 This project is more suitable for beginners
 
-也许你现在也和我当初一样迷茫，会一些react的语法，想实战一个项目，不知从何而起。UI框架琳琅满目，我认为学习一门技术，一定要从底层学起，这样以后入手一些UI框架以及封装好的Rudex方案Dva等会更加深入理解，而不是盲目的去会使用！
-
 该库已经非常详细的结合 官方实例、React学习之道、react社区、开源项目 等给出相应的示例展示并且详细备注
 
-- study-demo 为官方实例集合 + React学习之道 详情查看./study-demo/README.md
-- src下外层目录为 开源项目的实践 react + react-redux + less + animate + axios + redux-middleware + styled-component + css.module + react-router-dom
+&emsp;&emsp;也许你现在也和我当初一样迷茫，会一些react的语法，想实战一个项目，不知从何而起。UI框架琳琅满目，我认为学习一门技术，一定要从底层学起，这样以后入手一些UI框架以及封装好的Rudex方案Dva等会更加深入理解，而不是盲目的去会使用！
+
+## Catalogs
+- src
+  - study-demo  为官方实例集合 + React学习之道实例
+  - react-init  为 React + react-redux 结合使用
+  - react-cnode 为 react + redux Tab滑动实例
 
 
 2019-07-05
