@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import * as serviceWorker from './serviceWorker';
 // //引入react-redux集成
 import { Provider } from 'react-redux'
 /** 合并redux*/
-import store from './study-demo/example/redux/index.js'
+import store from '@/react-demo/example/redux/index.js'
 
 /**
  *  React之道 TODO-LIST
@@ -45,7 +44,7 @@ import store from './study-demo/example/redux/index.js'
 // React Tic-Tac-Toe
 // import App from './study-demo/tic-tac-toe/'
 
-import App from './study-demo/example/redux/redux/index.js'
+import App from '@/react-demo/example/redux/redux/index.js'
 
 const PRODUCTS = [
     {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},
@@ -69,7 +68,6 @@ ReactDOM.render(
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
 
 if (module.hot) { module.hot.accept(); }
 
