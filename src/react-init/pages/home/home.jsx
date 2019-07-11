@@ -23,7 +23,7 @@ import API from '@/react-init/api/api';
 
 // 样式引入
 import './home.less'
-
+import { is, fromJS } from 'immutable';
 
 @mixin({padStr})
 class Home extends Component {
@@ -107,7 +107,14 @@ class Home extends Component {
             alertTip: '',
         })
     }
- // 初始化数据，获取已选择的商品
+
+    componentWillReceiveProps(nextProps){
+        if(!is(fromJS(this.props.proData), fromJS(nextProps.proData))){
+            this.initData(nextProps);
+        }
+    }
+
+    // 初始化数据，获取已选择的商品
     initData = props => {
         this.selectedProList = [];
         props.proData.dataList.forEach(item => {
