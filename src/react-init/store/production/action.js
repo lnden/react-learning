@@ -1,7 +1,7 @@
 import * as pro from './action-type';
 import API from '@/react-init/api/api';
 
-// 初始化获取商品数据，保存至redux
+// 初始化获取商品数据，保存至 redux
 export const getProData = () => {
     // 返回函数，异步dispatch
     return async dispatch => {

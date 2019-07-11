@@ -14,7 +14,7 @@ import PublicHeader from '@/react-init/components/header/index.jsx';
 import TouchableOpacity from '@/react-init/components/TouchableOpacity/index.jsx'
 import PublicAlert from '@/react-init/components/alert/index.jsx'
 
-//  redux actions
+//  redux actions []
 import { saveFormData, saveImg, clearData } from '@/react-init/store/home/action';
 import { clearSelected } from '@/react-init/store/production/action';
 
