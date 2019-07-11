@@ -44,7 +44,7 @@ import store from '@/react-demo/example/redux/index.js'
 // React Tic-Tac-Toe
 // import App from './study-demo/tic-tac-toe/'
 
-import App from '@/react-demo/example/redux/redux/index.js'
+import App from '@/react-demo/antdesign/index.jsx'
 
 const PRODUCTS = [
     {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},

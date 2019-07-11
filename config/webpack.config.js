@@ -104,11 +104,11 @@ module.exports = function(webpackEnv) {
             // so that it honors browserslist config in package.json
             // which in turn let's users customize the target behavior as per their needs.
             postcssNormalize(),
-            require('postcss-pxtorem')({
-              rootValue : 75,
-              selectorBlackList  : [], //过滤
-              propList   : ['*'],
-            })
+            // require('postcss-pxtorem')({
+            //   rootValue : 75,
+            //   selectorBlackList  : [], //过滤
+            //   propList   : ['*'],
+            // })
           ],
           sourceMap: isEnvProduction && shouldUseSourceMap,
         },
